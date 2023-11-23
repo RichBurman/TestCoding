@@ -97,15 +97,49 @@
 
 #if elif else Challenge
 
-day = 'Friday'
+# day = 'Friday'
 
-if day == 'Monday':  
-    print('Meeting at 9:00')
-elif day == "Wednesday":
-    print("Meeting at 2:00")
-elif day == "Friday":
-    print("Meeting at 4:00")
+# if day == 'Monday':  
+#     print('Meeting at 9:00')
+# elif day == "Wednesday":
+#     print("Meeting at 2:00")
+# elif day == "Friday":
+#     print("Meeting at 4:00")
+# else:
+#     print("No meetings today")
+    
+# Nested If/Else Statements
+
+exit_program = False
+manual_override = True
+critical_systems_shutdown = False
+
+if not exit_program and not critical_systems_shutdown:
+    if manual_override:
+        print("Shutting system down manually")
+    else:
+        print("This program will not exit just yet")
+elif exit_program and critical_systems_shutdown is not True:
+    print("Critical systems must be safely shut down before exiting the program")
 else:
-    print("No meetings today")
+    print("This program will now be terminated...")
+
+
+# Nested If/Else Statements Challenge
+
+admin = True
+update_required = True
+
+if admin:
+    if update_required:
+        print("You are authorized to update")
+    else:
+        print("No update required")
+else: 
+    print("You need admin privileges to do this")
+    
     
 
+    
+
+    

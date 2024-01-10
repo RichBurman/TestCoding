@@ -304,13 +304,13 @@
 
 # Another Pass Example
 
-x = 0
-while x < 14:
-    if x > 4 and x < 11:
-        pass
-    else:
-        print(x)
-    x += 1 
+# x = 0
+# while x < 14:
+#     if x > 4 and x < 11:
+#         pass
+#     else:
+#         print(x)
+#     x += 1 
 
 # x = 0: Initializes a variable x with the value 0.
 
@@ -334,13 +334,13 @@ while x < 14:
     
 # Nested Iteration
 
-x = 0
-while x <= 3:
-    y = 200
-    while y <= 203:
-        print(x,y)
-        y += 1
-    x += 1
+# x = 0
+# while x <= 3:
+#     y = 200
+#     while y <= 203:
+#         print(x,y)
+#         y += 1
+#     x += 1
 
 # x = 0: Initializes a variable x with the value 0.
 
@@ -367,5 +367,142 @@ while x <= 3:
 # The outer while loop continues to execute until the condition x <= 3 becomes false. 
 # The code inside the inner while loop prints pairs of values for x and y. 
 
-
+# Lists - Remember all lists starts with 0 index. 
     
+# # Example 1
+    
+# fruits = ['apple', 'orange', 'banana', 'pear', 'plum']
+
+# # Print all fruits
+# for fruit in fruits:
+#     print(fruit)
+
+# print()
+
+# # Get an item located in a list
+# second_item = fruits[1]
+# print(second_item)
+# print()
+
+# # Add an item to the list
+# fruits.append('cherries')
+# print(fruits)
+# print()
+
+# # Reverse the list
+# fruits.reverse()
+# print(fruits)
+
+# # Sort the list alphabetically:
+# fruits.sort()
+# print(fruits)
+    
+
+# Example 2
+
+# all_numbers = [1, 5, 44, 22, 13, 17, 56, 3, 88, 9, 97]
+# big_numbers = []
+
+# for num in all_numbers:
+#     if num > 40:
+#         big_numbers.append(num)
+        
+# print(all_numbers)
+# print(big_numbers)
+
+
+# List Slicing and Indexing
+
+# fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+# # As lists are zero-indexed index 0 is the first element
+# print(fruits[0])
+# # Using an index of -1 gives the last element. Negative indexing counts from the right
+# print(fruits[-1])
+# print(fruits[2])
+
+# Slicing - This slice object can take three arguments; slice(start, end, step). 
+
+# start: Starting integer where the slicing of the object starts. Default is 0 if not provided.
+# end: Integer until which the slicing takes place. The slicing stops at index end - 1. Default is size of the list if not provided.
+# step: Integer value which determines the increment between each index for slicing. Default is 1 if not provided.
+
+# Example 1
+
+# fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+# print(fruits[::-1])
+
+# # ::1 will reverse the list
+
+# # Example 2
+
+# fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+# print(fruits[0:4:2])
+
+# this has a step of 2 so it will print the first 4 elements with a step of 2. 
+
+# Example 3
+
+# names = ["Mark", "Betty", "John", "Sally", "Bill", "Steven", "Mary", "Emily", "Adam"]
+
+# name = names[2]
+# print(name)
+
+# two_names = names[2:4]
+# print(two_names)
+
+# other_names = names[1:6:2]
+# print(other_names)
+
+# Example 4
+
+# menu = ['eggs', 'bacon', 'spam', 'spam']
+# print(menu)
+# print(menu.count('spam'))
+# print(menu.count('eggs'))
+# print(menu.index('eggs'))
+# print(menu.reverse())
+# print(menu)
+# print(menu.append('lobster thermidor'))
+# print(menu)
+# print(menu.sort())
+# print(menu)
+# print(menu.pop())
+
+
+# Example 5
+
+# crew = ["Jean-Luc", "Wesley", "Warf", "Deanna", "William", "Data", "Geordie", "Tasha"]
+# print(crew)
+# crew.pop()
+# print(crew)
+# crew.append("Beverly")
+# print(crew)
+# crew.extend(["Miles", "Guinan"])
+# print(crew)
+# crew.sort(key=len, reverse=True)
+# print(crew)
+
+# Tuples
+
+# It is one of the four collection data types. Unlike a list, it is not changeable. It can contain duplicate items. Those items can be of different types such as strings, integers, floats or even another tuple.
+# It is defined by enclosing the items in parentheses (()) and separating them by commas (,).
+
+# Example 1
+
+empty = ()
+singleton = 'hello',
+tup = 12345, 54321, 'hello!' # packing two ints and a string in a tuple
+print(empty)
+print(singleton)
+print(tup)
+print(tup[1])
+x, y, z = tup # unpacking tuple into variables
+print(z)
+
+
+
+
+
+
+
+

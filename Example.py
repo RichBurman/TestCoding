@@ -489,15 +489,203 @@
 
 # Example 1
 
-empty = ()
-singleton = 'hello',
-tup = 12345, 54321, 'hello!' # packing two ints and a string in a tuple
-print(empty)
-print(singleton)
-print(tup)
-print(tup[1])
-x, y, z = tup # unpacking tuple into variables
-print(z)
+# empty = ()
+# singleton = 'hello',
+# tup = 12345, 54321, 'hello!' # packing two ints and a string in a tuple
+# print(empty)
+# print(singleton)
+# print(tup)
+# print(tup[1])
+# x, y, z = tup # unpacking tuple into variables
+# print(z)
+
+# Example 2
+
+# cars = ("Tesla", "BMW", "Ferrari")
+# print(cars)
+# get_car = cars[1]
+# print(get_car)
+
+# car_one, car_two, car_three = cars
+
+# print(car_one)
+# print(car_two)
+# print(car_three)
+
+# Dictionaries
+# A dictionary is a collection which is unordered, changeable and indexed.
+# In Python dictionaries are written with curly brackets, and they have keys and values.
+
+# Example 1
+
+# user = {
+#     "username": "Rich226402",
+#     "first_name": "Rich",
+#     "last_name": "Burman",
+#     "age": 37
+# }
+
+# print(user)
+# print(user['age'])
+# user['home'] = 'UK'
+# user['age'] = 38
+# print(user)
+# del user['home'] 
+# print(user)
+# print(list(user))
+# print(sorted(user))
+# print(user)
+# print('username' in user)
+
+# # Example 2
+
+# spaceship = { 
+#     "name": "Red Dwarf", 
+#     "type": "Mining vessel", 
+#     "owner" : "Jupiter Mining Corporation", 
+#     "captain": "Frank Hollister"
+#     }
+    
+# print(spaceship)
+
+# Example 3
+
+# keys = ['username', 'first_name', 'last_name', 'age']
+# default_value = ''
+# user = dict.fromkeys(keys, default_value)
+# print(user)
+# user['username'] = 'Rich226402'
+# user['first_name'] = 'Rich'
+# user['last_name'] = 'Burman'
+# user['age'] = 37
+# print(user)
+# print(user['age'])
+# print(user.get('home', "doesn't exist"))
+# user['home'] = 'UK'
+# user['age'] = 100
+# print(user)
+# del user['home'] 
+# print(user)
+# print(list(user.keys()))
+# print(list(user.values()))
+# print(user)
+
+# Example 4
+
+# data = {
+#     "first_name": "Arthur",
+#     "last_name": "Dent",
+#     "species": "Human"
+# }
+
+# add your code here
+
+# name = data["first_name"]
+# print(name)
+
+# species = data["species"]
+# print(species)
+
+# data["age"] = 42
+
+
+# # this will print the data to the terminal
+# print(data)
+
+# Example 5
+
+# user = {
+#     "username": "Rich226402",
+#     "first_name": "Rich",
+#     "last_name": "Burman",
+#     "age": 37
+# }
+
+# print(user)
+# print(user.items()) # returns a list of tuples
+# print(user.get('age', 0)) # gets the value of the key age
+# user.update({'home': 'UK'}) # adds a new key value pair to the dictionary
+# print(user)
+# print(user.popitem()) # removes the last item in the dictionary
+# print(user)
+# user.clear() # clears the dictionary
+# print(user)
+
+# Example 6
+
+# challenger = {
+# 	"name": "Katniss Everdeen",
+# 	"age": 16,
+# 	"district": 12,
+# 	"weapon": "Bow and Arrow", 
+# 	"status": "Victor"
+# }
+
+# challenger.update({"occupation" : "Hunter"}) # adds a new key value pair to the dictionary
+# occupation = challenger.get('occupation') # gets the value of the key occupation
+# print(occupation) # prints the value of the key occupation
+# challenger.update({"age" : 17}) # updates the value of the key age
+# challenger.pop('status') # removes the key value pair status
+
+# print(challenger) # prints the dictionary
+
+
+# Sets
+
+# A set is a collection which is unordered and unindexed.
+# In Python sets are written with curly brackets.
+# Sets are unordered, so you cannot be sure in which order the items will appear.
+# Sets are unchangeable, meaning that we cannot change the items after the set has been created.
+# Sets cannot contain duplicate items.
+# Sets can contain different data types.
+# Sets can be used to perform mathematical set operations like union, intersection, symmetric difference etc.
+# Sets can be used to remove duplicate values from a list.
+# Sets can be used to quickly check if an item is part of a set, or not.
+
+# Example 1
+
+# breakfast = {'bacon', 'egg', 'spam', 'spam', 'spam', 'spam', 'spam'}
+# print(breakfast)
+# print('egg' in breakfast)
+# breakfast.add('sausage')
+# print(breakfast)
+# breakfast.update(['Lobster Thermidor', 'truffle pate', 'crevettes', 'shallots','aubergines'])
+# print(breakfast)
+# breakfast.discard('aubergines')
+# print(breakfast)
+
+# Sets have mathematical operations like union, intersection, difference, and symmetric difference.
+# A union is all values that are in either set or both. The intersection is the values that are in both sets. 
+# The difference is the values that are in the first set but not the second. 
+# The symmetric difference is all values that are in one of the sets but not both of them.
+
+# Example 2
+
+hello = set("Hello")
+world = set("World")
+print(f"The unique letters in hello are: {hello}")
+print(f"The letters in hello or world or both are: {hello|world}") # | is the symbol for union
+print(f"The letters in both hello and world are: {hello&world}") # & is the symbol for intersection
+print(f"The letters in hello but not world are: {hello-world}") # - is the symbol for difference
+print(f"The letters in hello and world but not both are: {hello^world}") # ^ is the symbol for symmetric difference
+
+# Example 3
+
+product_list = ['hammer', 'saw', 'nails', 'wood', 'screws', 'paint', 'brushes', 'light bulbs'] # list of products
+products_bought = {'nails', 'screws', 'hammer', 'wood', 'saw', 'hammer', 'saw', 'nails', 'nails', 'screws', 'hammer'} # set of products bought
+
+
+products_bought.add("light bulbs") # adds light bulbs to the set
+products_bought.update(['wood', 'screws', 'saw']) # adds wood, screws and saw to the set
+
+has_nails = 'nails' in products_bought # checks if nails is in the set
+has_paint = 'paint' in products_bought # checks if paint is in the set
+
+unsold_items = set(product_list)-(products_bought) # finds the unsold items
+
+print(has_nails) # prints the value of has_nails
+print(has_paint) # prints the value of has_paint
+print(unsold_items) # prints the unsold items
 
 
 

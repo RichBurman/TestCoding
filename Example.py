@@ -759,29 +759,158 @@
 
 # Example 4
 
-words =["apple", "banana", "cherry", "date", "elderberry"] # list of words
+# words =["apple", "banana", "cherry", "date", "elderberry"] # list of words
 
-for index in range(len(words)): # iterates over the range of the length of the words list
-    current_word = words[index] # gets the current word
-    word_length = len(current_word) # gets the length of the current word
+# for index in range(len(words)): # iterates over the range of the length of the words list
+#     current_word = words[index] # gets the current word
+#     word_length = len(current_word) # gets the length of the current word
 
-    print(f"The word {current_word} has {word_length} characters") # prints the current word and the length of the current word
+#     print(f"The word {current_word} has {word_length} characters") # prints the current word and the length of the current word
 
     # Include index, word, and length in the print statement - Which helps explain even further. 
 
-words = ["apple", "banana", "cherry", "date", "elderberry"]
+# words = ["apple", "banana", "cherry", "date", "elderberry"]
 
-for index in range(len(words)):
-    current_word = words[index]
-    word_length = len(current_word)
+# for index in range(len(words)):
+#     current_word = words[index]
+#     word_length = len(current_word)
 
-    # Include index, word, and length in the print statement
-    print(f"Index: {index}, Word: {current_word}, Length: {word_length} characters")
+#     # Include index, word, and length in the print statement
+#     print(f"Index: {index}, Word: {current_word}, Length: {word_length} characters")
 
 
 # List Comprehensions
     
+# Example 1
     
+# combination = [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+
+# The expression [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y] is a list comprehension in Python that generates a list of tuples representing combinations of elements from two lists, [1,2,3] and [3,1,4], with the condition that the elements in each tuple must be different.
+
+
+
+# for x in [1,2,3]: This part of the list comprehension iterates over each element in the list [1,2,3], and the variable x takes on each value in turn.
+
+# for y in [3,1,4]: This part of the list comprehension is nested inside the first loop. 
+#It iterates over each element in the list [3,1,4], and the variable y takes on each value in turn for each iteration of the outer loop.
+
+# if x != y: This is a condition that filters out combinations where x is equal to y.
+
+# (x, y): This creates a tuple with the current values of x and y.
+
+# This list comprehension generates all combinations of elements from the two lists [1,2,3] and [3,1,4] where the elements in each tuple are not equal.
+# The resulting list will look like this:
+
+# [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
+# Example 2
+
+# # 1. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print([i for i in range(10)])
+
+# # 2. [0, 2, 4, 6, 8, 10]
+# print([i for i in range(0,11,2)])
+
+# # 3. [0, 1, 4, 9, 16, 25, 36, 49]
+# print([x**2 for x in range(0,8)])
+
+# # 4. [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+# print([((i,(i+1))) for i in range(5)])
+
+# # 5. ['woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo']
+# print(['woohoo' for i in range(7)])
+
+# # 6. ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+# hw = 'hello world'
+# print([i for i in hw])
+
+# # 7. [('A', 'D'), ('A', 'E'), ('A', 'F'), ('B', 'D'), ('B', 'E'), ('B', 'F'), ('C', 'D'), ('C', 'E'), ('C', 'F')]
+# ab = 'ABCDEF'
+# print([(ab[i],ab[j]) for i in range(0,3) for j in range(3,6)])
+
+# Example 3
+
+# letters = [i for i in "Marvin"]
+# print(letters)
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# evens = [num for num in numbers if num % 2 == 0]
+# print(evens)
+
+# Dictionary Comprehensions
+
+# Example 1 
+
+# fruits = ['apple', 'mango', 'banana','cherry']
+# print({f:len(f) for f in fruits})
+
+# Example 2 - explains much easier
+
+# cards = ['king', 'queen', 'jack', 'ace']
+
+# # write your code here
+
+# cards_dict = {f:f.upper() for f in cards} # creates a dictionary comprehension. f:f.upper() is the key value pair. f is the key and f.upper() is the value.
+# print(cards_dict)
+
+# Nested Data Structures
+
+# Example 1
+
+# matrix = [
+#     [11, 12, 13, 14],
+#     [15, 16, 17, 18],
+#     [19, 20, 21, 22],
+# ]
+
+# print([[row[i] for row in matrix] for i in range(4)]) #     [row[i] for row in matrix] for i in range(4) is a nested list comprehension.
+
+# Example 2
+
+# payroll = {'emp1': {'name': 'Precious', 'job': 'Mgr', 'Wage': 50000},
+#      'emp2': {'name': 'Kim', 'job': 'Dev', 'Wage': 60000},
+#      'emp3': {'name': 'Sam', 'job': 'Dev', 'Wage': 70000}}
+
+# print(payroll)
+
+# print(payroll['emp1']['name'])
+# print(payroll['emp1'].get('salary'))
+# print(payroll['emp1'].get('Wage'))
+# payroll['emp4'] = {'name': 'Max', 'job': 'Admin', 'Wage': 30000}
+# print(payroll)
+# del payroll['emp3']
+
+# for id, info in payroll.items(): # iterates over the payroll dictionary
+#     print(f'\nEmployee ID: {id}') # prints the employee id
+#     for key in info: # iterates over the info dictionary
+#         print(f'{key} : {info[key]}') # prints the key value pairs
+
+# First Iteration (id='emp1', info={'name': 'Precious', 'job': 'Mgr', 'Wage': 50000}):
+        
+# Nested Data Structures
+        
+# student_data = [
+#     {
+#         "name": "John Smith",
+#         "email": "john@gmail.com", 
+#         "subjects": ["Math", "Psychology", "Physics", "Chemistry", "Biology"]
+        
+#     },
+#     {
+#         "name": "Mary Jones", 
+#         "email": "mary@gmail.com",
+#         "subjects": ["Fine Art", "Music", "Biology", "Geography", "Politics"]
+#     }
+# ]
+    
+# print(student_data)
+
+
+
+
+
+
 
 
 

@@ -661,31 +661,132 @@
 
 # Example 2
 
-hello = set("Hello")
-world = set("World")
-print(f"The unique letters in hello are: {hello}")
-print(f"The letters in hello or world or both are: {hello|world}") # | is the symbol for union
-print(f"The letters in both hello and world are: {hello&world}") # & is the symbol for intersection
-print(f"The letters in hello but not world are: {hello-world}") # - is the symbol for difference
-print(f"The letters in hello and world but not both are: {hello^world}") # ^ is the symbol for symmetric difference
+# hello = set("Hello")
+# world = set("World")
+# print(f"The unique letters in hello are: {hello}")
+# print(f"The letters in hello or world or both are: {hello|world}") # | is the symbol for union
+# print(f"The letters in both hello and world are: {hello&world}") # & is the symbol for intersection
+# print(f"The letters in hello but not world are: {hello-world}") # - is the symbol for difference
+# print(f"The letters in hello and world but not both are: {hello^world}") # ^ is the symbol for symmetric difference
 
 # Example 3
 
-product_list = ['hammer', 'saw', 'nails', 'wood', 'screws', 'paint', 'brushes', 'light bulbs'] # list of products
-products_bought = {'nails', 'screws', 'hammer', 'wood', 'saw', 'hammer', 'saw', 'nails', 'nails', 'screws', 'hammer'} # set of products bought
+# product_list = ['hammer', 'saw', 'nails', 'wood', 'screws', 'paint', 'brushes', 'light bulbs'] # list of products
+# products_bought = {'nails', 'screws', 'hammer', 'wood', 'saw', 'hammer', 'saw', 'nails', 'nails', 'screws', 'hammer'} # set of products bought
 
 
-products_bought.add("light bulbs") # adds light bulbs to the set
-products_bought.update(['wood', 'screws', 'saw']) # adds wood, screws and saw to the set
+# products_bought.add("light bulbs") # adds light bulbs to the set
+# products_bought.update(['wood', 'screws', 'saw']) # adds wood, screws and saw to the set
 
-has_nails = 'nails' in products_bought # checks if nails is in the set
-has_paint = 'paint' in products_bought # checks if paint is in the set
+# has_nails = 'nails' in products_bought # checks if nails is in the set
+# has_paint = 'paint' in products_bought # checks if paint is in the set
 
-unsold_items = set(product_list)-(products_bought) # finds the unsold items
+# unsold_items = set(product_list)-(products_bought) # finds the unsold items
 
-print(has_nails) # prints the value of has_nails
-print(has_paint) # prints the value of has_paint
-print(unsold_items) # prints the unsold items
+# print(has_nails) # prints the value of has_nails
+# print(has_paint) # prints the value of has_paint
+# print(unsold_items) # prints the unsold items
+
+# Iterating over Python Data Structures
+
+# Example 1
+
+# user = {
+#     "username": "rich226402", 
+#     "first_name": "Rich",
+#     "last_name": "Burman",
+#     "age": 38
+# }
+
+# for key, value in user.items(): # .items() returns a list of tuples
+#     print(f"Key: {key}") # prints the key
+#     print(f"Value: {value}") # prints the value
+#     print("------------------") #   prints a line to separate the key value pairs
+
+# Example 2
+    
+# # Create a set
+# directions = set(['north', 'south', 'east', 'west'])
+
+# # Print its members
+# for direction in directions:
+#     print(direction)
+
+# # Add an item to the set:
+# directions.add('northwest')
+
+# print()
+# # Print the members again
+# # Notice the order cannot be relied upon!
+# for direction in directions:
+#     print(direction)
+
+# Example 3
+
+# data = {
+# 	"first_name": "brian",
+# 	"last_name": "johnson",
+# 	"occupation": "student"
+# }
+
+# scores = [6, 9, 8, 7, 8, 9]
+
+# # write your code here
+# for key, value in data.items(): # .items() returns a list of tuples
+#     if value != "student": # checks if the value is not equal to student
+#         data[key] = value.capitalize() # capitalizes the value
+# print(data)
+
+# for ind in range(len(scores)): # iterates over the range of the length of the scores list. 
+#     scores[ind] += 1 # adds 1 to each score
+# print(scores)
+
+# len(scores): This function returns the length of the scores list. In this case, scores is [6, 9, 8, 7, 8, 9], so len(scores) is 6.
+
+# range(len(scores)): The range() function in Python generates a sequence of numbers. 
+# When you provide a single argument to range(), it generates numbers starting from 0 up to, but not including, the specified value. 
+# So, range(len(scores)) generates the sequence of numbers [0, 1, 2, 3, 4, 5], which corresponds to the indices of the scores list.
+
+# for ind in range(len(scores)):: This is a for loop in Python. 
+# It iterates over each value produced by range(len(scores)). 
+# In this case, it iterates over the indices [0, 1, 2, 3, 4, 5]. 
+# The variable ind is used as the loop variable to represent the current index during each iteration.
+
+# So, the line for ind in range(len(scores)): 
+# can be read as "for each index in the range from 0 to the length of the scores list - 1, do the following:". 
+# Inside the loop, the code scores[ind] += 1 modifies the value at the current index (ind) by adding 1 to it. 
+# This allows you to access and update each element in the scores list during each iteration of the loop.
+
+# Example 4
+
+words =["apple", "banana", "cherry", "date", "elderberry"] # list of words
+
+for index in range(len(words)): # iterates over the range of the length of the words list
+    current_word = words[index] # gets the current word
+    word_length = len(current_word) # gets the length of the current word
+
+    print(f"The word {current_word} has {word_length} characters") # prints the current word and the length of the current word
+
+    # Include index, word, and length in the print statement - Which helps explain even further. 
+
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+for index in range(len(words)):
+    current_word = words[index]
+    word_length = len(current_word)
+
+    # Include index, word, and length in the print statement
+    print(f"Index: {index}, Word: {current_word}, Length: {word_length} characters")
+
+
+# List Comprehensions
+    
+    
+
+
+
+
+
 
 
 

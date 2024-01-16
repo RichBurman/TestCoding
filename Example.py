@@ -1105,10 +1105,83 @@
 
 # example_function(name="John", age=25, city="New York")
 
-def check(a):
-    print("Even" if a % 2 == 0 else "Odd")
+# Example 15 
 
-check(12)
+# def check(a):
+#     print("Even" if a % 2 == 0 else "Odd")
+
+# check(12)
+
+# Scope
+
+# can_access = False
+
+# def update_access():
+#     global can_access
+#     age = int(input('Enter your age: '))
+#     if age >= 18:
+#         can_access = True
+#         return 'You are old enough to enter'
+#     else:
+#         return 'You are too young, you may not enter'
+
+# # Call the function and store the result in a variable
+# result_message = update_access()
+
+# # Print the result
+# print(result_message)
+
+# # Now, you can also print the value of can_access
+# print(can_access)
+
+# Example 2
+
+# test_passed = False # global variable
+# answer = "friend" # global variable
+
+# def speak_friend_and_enter(): # function definition
+# 	global test_passed # global variable
+# 	if answer == "friend": # checks if the answer is equal to friend
+# 		test_passed = True # sets the test_passed variable to True
+        
+# speak_friend_and_enter() # function call
+# print(test_passed) # prints the value of test_passed
+
+# nonlocal
+
+# def which_scope():
+#     my_age = 49 # local variable my_age
+#     def inner_scope():
+#         nonlocal my_age # No longer an issue because of this
+#         my_age += 1
+#         print(my_age)
+#     inner_scope()
+
+# which_scope()
+
+# # example 2
+
+# def outer_function():
+#     age = 10
+#     def become_adult():
+#         nonlocal age
+#         age = age + 11
+        
+        
+#     become_adult()
+#     return age
+
+# result = outer_function()
+# print(result)
+
+
+
+
+
+
+
+
+
 
 
 

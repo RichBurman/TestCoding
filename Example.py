@@ -906,8 +906,209 @@
     
 # print(student_data)
 
+# Function in Python
+
+# Basic Example
+
+# def print_message():
+#     print("Hello World!")
+
+# print_message()
+
+# # Example 2
+
+# add = lambda a, b : a + b
+# print(add(5, 12))
 
 
+# Example 3
+
+# # 2. This function runs for the name and age function calls
+# def get_user_input(prompt):
+#     return input(prompt)
+
+# # 4. This function runs twice
+# def print_out_to_console(value_to_be_printed):
+#     print(value_to_be_printed)
+
+# # 1. name and age are the first two function calls to run sequentially
+# name = get_user_input("Input your name:")
+# age = get_user_input("Input your age:")
+
+# # 3. Then function calls run sequentially
+# print_out_to_console(f"Your name is {name}")
+# print_out_to_console(f"You are {age} years old")
+
+# Example 4
+
+# def print_hello_world():
+#     print('Hello World!')
+
+# print_hello_world()
+
+# Example 5
+
+# def print_message(name): # name is the parameter
+#     print(f"Hello {name}") # name is the argument
+
+# username = input("What's your name? ") # username is the argument
+# print_message(username) # username is the argument
+
+
+# Example 6
+
+# def print_message(name="World"): #  name is the parameter
+#     return f"Hello {name}" # name is the argument
+
+# username = input("What's your name? ") # username is the argument
+# print(print_message()) #    name is the argument
+# print(print_message(username)) # username is the argument
+
+
+# Exmaple 7
+
+# def add_two_nums(num1, num2): # function definition with parameters
+#     print(num1, num2) # function body
+
+# add_two_nums(1,2) # function call
+
+# Example 8
+
+# def add_two_nums(num1, num2):
+#     sum = num1 + num2
+#     return sum
+
+# result = add_two_nums(10,32)
+# print(result)
+
+# Example 9
+
+# a function that takes 3 numbers, multiples them together and returns the result.
+
+# def times3(num1, num2, num3): 
+#     sum = num1 * num2 * num3 
+#     return sum
+
+# result = times3(1,2,3)
+# print(result)
+
+# #  a function that takes one number and returns its value squared (the number times itself)
+
+# def square(num1):
+#     return num1 ** 2
+    
+# result = square(4)
+# print(result)
+
+# # a function that takes two numbers and returns the result of the first number divided by the second number
+# def divide(num1, num2):
+#     sum = num1 / num2
+#     return sum
+
+# result = divide(30,3)
+# print(result)
+
+# Example 10
+
+# def add_numbers(nums_tuple, min_value):
+#     return sum([x for x in nums_tuple if x >= min_value])
+    
+# total = add_numbers((21, 4, 7, 19, 1), 15)
+# print(total)
+
+# # Example 11 
+
+# numbers = [2, 5, 8, 10, 3, 6]
+
+# # Calculate the sum of all numbers in the list
+# total_sum = sum(numbers)
+
+# print(f"The sum of the numbers is: {total_sum}")
+
+# Example 12
+
+# def addition(a, b):
+#     return a + b
+
+# print(addition(2,2))
+
+# def add_integers(list_integers):
+# 	total = 0
+# 	for x in list_integers:
+# 		total += x
+# 	return total
+
+# list_integers = [1, 2, 3, 4]
+# print(add_integers(list_integers))
+
+# def add_many_integers(*integers):
+# 	# Rename *args to something suitable
+# 	total = 0
+# 	for x in integers:
+# 		# As it is a tuple you can use the in keyword to iterate 
+# 		total += x
+# 	return total
+
+# print(add_many_integers(1,2,3,4,5,6,7,8,9))
+
+# def concatenate_words(**words):
+# 	result = ""
+# 	# As **kwargs is a dict you need to iterate over .values()
+# 	for arg in words.values():
+# 		result += arg
+# 		result += " "
+# 	return result
+
+# print(concatenate_words(a='This', b="is", c="a", d="useful", e="feature"))
+
+# Example 13
+
+# # *args
+# def make_string(*strings):
+#     return ' '.join(strings)
+
+# my_string = make_string("Alderaan", "Coruscant", "Dagobah", "Endor", "Hoth")
+# print(my_string)
+
+# # **kwargs
+# def get_age(**data):
+#     return data.get("age", "no age provided")
+     
+# pats_age = get_age(name="pat", level=4, age=33, occupation="postman")            
+# print(pats_age)
+
+# Example 14
+
+# *args
+# def concatenate_strings(*args): # args is a tuple
+#     return ' '.join(args) # joins the tuple together with a space between each item
+
+# result1 = concatenate_strings("Hello", "World", "from", "Python") # args is a tuple
+# print(result1) #    prints the result of the concatenate_strings function
+
+# # **kwargs
+# def create_person(**kwargs): # kwargs is a dictionary
+#     return f"Name: {kwargs.get('name', 'Unknown')}, Age: {kwargs.get('age', 'Unknown')}" # gets the name and age from the dictionary
+
+# person_info = create_person(name="John", age=30, occupation="Engineer") # kwargs is a dictionary
+# print(person_info) # prints the result of the create_person function
+
+# def example_function(*args):
+#     for arg in args:
+#         print(arg)
+
+# example_function(1, 2, 3, "four")
+
+# def example_function(**kwargs):
+#     for key, value in kwargs.items():
+#         print(f"{key}: {value}")
+
+# example_function(name="John", age=25, city="New York")
+
+def check(a):
+    print("Even" if a % 2 == 0 else "Odd")
+
+check(12)
 
 
 

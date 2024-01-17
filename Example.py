@@ -1174,7 +1174,164 @@
 # result = outer_function()
 # print(result)
 
+# Defining functions
 
+#Example 1 
+
+# numbers = [4, 7, 12, 33, 13, 67]
+# remove = numbers.pop
+# print(remove())
+# print(remove(0))
+
+# integers = [1, 2, 3, 4, 5, 6]
+# def is_mult_of_three(n):
+#     return n % 3 == 0
+    
+# print(list(filter(is_mult_of_three, integers)))
+
+
+# Example 2
+
+# def print_arguments( **args ):
+#     """Prints the arguments"""
+#     print(f'The arguments are {args}')
+
+# def pass_function(function_name, **args):
+#     """Takes a function as an argument
+#     Passes the argument 'l' to the function passed in 
+#     """
+#     print("This function takes another function as an argument")
+#     function_name(f=args['l'])
+
+# pass_function(print_arguments, l='spam')
+
+# Decorators
+
+# Example 1
+
+# def define_units(unit):
+#     """Define the units"""
+#     def decorator_define_units(func):
+#         func.unit = unit
+#         return func
+#     return decorator_define_units
+
+# @define_units('m^2')
+# def area(length, width):
+#     """Calculate area of rectangle or parallelogram"""
+#     return length * width
+
+# # The unit defined in the decorator can be used with dot notation
+# # In this case the function area units can be used as area.unit
+# print(f'The area is {area(3,5)}{area.unit}')
+
+# Example 2
+
+# def add_author(func):
+#     """
+#     Decorator to add string with author information
+#     to print after decorated function runs
+#     """
+#     def wrapper(*args):
+#         r = func(*args)
+#         return f"{r}\nBy R Nurman"
+#     return wrapper
+        
+# # write your code here
+
+# @add_author
+# def print_article_title(title):
+#     return f"Article Title:: {title}"
+    
+# result = print_article_title("Python Decs")
+# print(result)
+    
+# Example 3
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+# odd_nums = []
+
+# for x in numbers :
+#     if x % 2 != 0 :
+#         odd_nums.append(x)
+
+# print(numbers)
+# print(odd_nums)
+
+# Example using a function - Step 1 
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+# def get_odd_nums():
+#     print("function running")
+
+# get_odd_nums()
+
+# # Step 2 
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+# def get_odd_nums(list_of_nums):
+#     print(list_of_nums)
+
+# get_odd_nums(numbers)
+
+# step 3 
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+# def get_odd_nums(list_of_nums):
+#     new_list = []
+#     for num in list_of_nums:
+#         print(num)
+        
+# get_odd_nums(numbers)
+
+# step 4
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+# def get_odd_nums(list_of_nums):
+#     new_list = []
+#     for num in list_of_nums:
+#         if num % 2 != 0:
+#             print(num)
+        
+# get_odd_nums(numbers)
+
+# step 5
+
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+# def get_odd_nums(list_of_nums):
+#     new_list = []
+#     for num in list_of_nums:
+#         if num % 2 != 0:
+#             new_list.append(num)
+#     return new_list
+
+# result = get_odd_nums(numbers)
+# print(result)
+
+# step 6
+
+numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+def get_odd_nums(list_of_nums):
+    new_list = []
+    for num in list_of_nums:
+        if num % 2 != 0:
+            new_list.append(num)
+    return new_list
+
+result = get_odd_nums(numbers)
+
+if result:
+    print("Here are the odd numbers", result)
+else:
+    print("No odd numbers found")
+
+# Classes 
 
 
 

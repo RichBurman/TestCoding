@@ -1315,23 +1315,420 @@
 
 # step 6
 
-numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+# numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
 
-def get_odd_nums(list_of_nums):
-    new_list = []
-    for num in list_of_nums:
-        if num % 2 != 0:
-            new_list.append(num)
-    return new_list
+# def get_odd_nums(list_of_nums):
+#     new_list = []
+#     for num in list_of_nums:
+#         if num % 2 != 0:
+#             new_list.append(num)
+#     return new_list
 
-result = get_odd_nums(numbers)
+# result = get_odd_nums(numbers)
 
-if result:
-    print("Here are the odd numbers", result)
-else:
-    print("No odd numbers found")
+# if result:
+#     print("Here are the odd numbers", result)
+# else:
+#     print("No odd numbers found")
 
-# Classes 
+# Classes - A class name should start with a capital letter and should have a docstring. 
+
+# Example 1 
+    
+# class HelloWorld:
+#     """A simple example class"""
+#     i = 12345
+
+#     def f(self):
+#         return 'Hello, world!'
+
+# The __init__() method. An __init__() method on its own would simply create an empty class object. However, an __init__() method can take arguments. 
+
+# Example 1
+
+# class Car:
+# 	def __init__(self, color, make, model, fueltype):
+# 		self.color = color
+# 		self.make = make
+# 		self.model = model
+# 		self.fueltype = fueltype
+
+# bullitt = Car('Green', 'Ford', 'Mustang', 'Gasoline')
+
+# print(bullitt.color)
+
+# Example 2 
+
+# class Customer:
+#     """Creates an instance of Customer"""
+#     def __init__(self, fname, lname,email,phone):
+#         self.fname = fname
+#         self.lname = lname
+#         self.email = email
+#         self.phone = phone
+
+
+
+# # The code below will use your class to print values to the terminal after
+# # it has been written. Comment the lines below back in to test it
+
+# customer_one = Customer("Theon", "Greyjoy", "t.gj@email.com", "123456789")
+# print(customer_one)
+# print(customer_one.fname)
+# print(customer_one.lname)
+# print(customer_one.email)
+# print(customer_one.phone)
+
+# Example 3
+
+# class Bird:
+#    """
+#    Bird class
+#    """
+#    def __init__(self, kind, call):
+#       #properties
+#        self.kind = kind
+#        self.call = call
+
+#    #behaviour
+#    def description(self):
+#        """
+#        describe the bird
+#        """
+#        return f"A {self.kind} goes {self.call}" 
+       
+# owl = Bird('Owl', 'Twit Twoo!')
+# print(owl.description())
+
+
+# Example 4
+
+# Write your code here
+
+# class OrderItem():
+    
+#     """
+#     Creates an instance of OrderItem
+#     """
+#     def __init__(self, item, price, quantity):
+#         self.item = item
+#         self.price = price
+#         self.quantity = quantity
+    
+#     def description(self):
+#         return f"{self.quantity} x {self.item} at {self.price} each"
+
+
+# # The code below will use your class to print values to the terminal after 
+# # it has been written. Comment the lines below back in to test it  
+
+# order_item_one = OrderItem("bowtie", 10, 3)
+# print(order_item_one.description())
+
+# order_item_two = OrderItem("Fez", 25, 1)
+# print(order_item_two.description())
+
+# Example 5
+
+# class Bird:
+#    """
+#    Bird class
+#    """
+#    def __init__(self, kind, call):
+#       #properties
+#        self.kind = kind
+#        self.call = call
+
+#    #behaviour
+#    def description(self):
+#        """
+#        describe the bird
+#        """
+#        return f"A {self.kind} goes {self.call}" 
+  
+#    def bird_call(self):
+#        print(self.call.upper())
+
+# owl = Bird('Owl', 'Twit Twoo!')
+# print(owl.call)
+# print(owl.description())
+# crow = Bird('Crow', 'Caaaw!')
+# print(crow.description())
+# owl.call = 'screech'
+# print(owl.description())
+# del owl.call
+# print(owl.description())
+
+# # Example 6
+
+# class User():
+#     """
+#     Creates an instance of User
+#     """
+#     def __init__(self, username, email, subscribed):
+#         self.username = username
+#         self.email = email
+#         self.subscribed = subscribed
+    
+#     def description(self):
+#         """
+#         Describes the instance of User
+#         """
+#         return f"user: {self.username}, email: {self.email}, subscribed: {self.subscribed}"
+
+
+# # write your code here
+
+# user_one = User("arnold", "arnold@email.com", True)
+# print(user_one.email)
+# user_one.email = "murphy@email.com"
+# print(user_one.description())
+
+
+# example 7
+
+# class Bird:
+#     """
+#     Bird class
+#     """
+#     # class attribute
+#     definition = "a warm-blooded egg-laying vertebrate animal distinguished by the possession of feathers, wings, a beak, and typically by being able to fly."
+
+#     def __init__(self, kind, call):
+#         # instance attribute
+#         self.kind = kind
+#         self.call = call
+
+#     def description(self):
+#         """
+#         describe the bird
+#         """
+#         return f"A {self.kind} goes {self.call}" 
+       
+# owl = Bird('Owl', 'Twit Twoo!')
+# print(owl.description())
+# print(owl.definition)
+# print(owl.call)
+# print(Bird.definition)
+# print(Bird.call) # this will throw an error as call is an instance attribute and not a class attribute
+
+
+# Example 8
+
+# class ContactInfo():
+#     """
+#     Creates an instance of ContactInfo
+#     """
+#     about = "Contact information for customer"
+    
+#     def __init__(self, name, email):
+#         self.name = name
+#         self.email = email
+    
+#     def description(self):
+#         return f"{self.name}: {self.email}"
+        
+# print(ContactInfo.about)
+
+# contact = ContactInfo("dave", "lister@email.com")
+# print(contact.description())
+
+# Example 9 
+
+# class Bird:
+#     """
+#     Bird class
+#     """
+#     # class attribute
+#     definition = "a warm-blooded egg-laying vertebrate animal distinguished by the possession of feathers, wings, a beak, and typically by being able to fly."
+
+#     def __init__(self, kind, call):
+#         # instance attribute
+#         self.kind = kind
+#         self.call = call
+
+#     def description(self): # instance method
+#         """
+#         describe the bird
+#         """
+#         parrot = "Norwegian Blue"
+#         return f"A {self.kind} goes {self.call} and is {self.definition} It is not a {parrot}" 
+       
+
+# owl = Bird('owl', 'Twit Twoo!') # owl is an instance of the Bird class
+# print(owl.description())
+
+# example 10
+
+# class BlogPost:
+#     """
+#     Creates an instance of BlogPost
+#     """
+    
+#     def __init__(self, title, content, author):
+#         self.title = title
+#         self.content = content
+#         self.author = author
+        
+#     def get_overview(self):
+#         return f"{self.title} by {self.author}"
+        
+#     def full_info(self):
+#         return f"Blog post: {self.title}. Content: {self.content}. Author: {self.author}"
+
+# post = BlogPost("Python Classes", "Python is known as an object-oriented language...", "Code Institute")
+# print(post.get_overview())
+# print(post.full_info())
+
+
+# Example 11
+
+# class Bird:
+#     """
+#     Bird class
+#     """
+#     # class attribute
+#     definition = "a warm-blooded egg-laying vertebrate animal distinguished by the possession of feathers, wings, a beak, and typically by being able to fly."
+
+#     def __init__(self, kind, call):
+#         # instance attribute
+#         self.kind = kind
+#         self.call = call
+
+#     def description(self):
+#         """
+#         describe the bird
+#         """
+#         return f"A {self.kind} goes {self.call} and is {self.definition}" 
+
+
+# class Parrot(Bird):
+#     def __init__(self, color):
+#         Bird.__init__(self, 'Parrot', 'Kah!')
+#         self.color = color
+
+
+# parrot = Parrot('blue')
+# print(parrot.color)
+# print(parrot.description())
+
+
+# Example 12
+
+# class JobListing():
+#     """
+#     Creates an instance of JobListing
+#     """
+#     def __init__(self, job_title, department):
+#         self.job_title = job_title
+#         self.department = department
+    
+#     def description(self):
+#         return f"Job opening for {self.job_title} in {self.department} department"
+
+# # write your code here
+
+# class SalesManager(JobListing):
+#     def __init__(self, salary):
+#         JobListing.__init__(self, "Sales Manager", "Sales")
+#         self.salary = salary
+        
+# sales_manager = SalesManager(45000) 
+# print(sales_manager.description())
+# print(sales_manager.salary)
+        
+# Mixins 
+
+# Example 1 
+
+class Employee:
+    """
+    Base class for employees
+    """
+    # class attribute
+    employee_no = 0
+
+    def __init__(self, name, no_of_years):
+        # instance attribute
+        self.name = name
+        self.no_of_years = no_of_years
+        Employee.employee_no += 1 # increments the employee_no class attribute by 1
+        self.employee_no = Employee.employee_no # sets the employee_no instance attribute to the value of the employee_no class attribute
+
+    def details(self):
+        """
+        Method to return employee details as a string
+        """
+        return f"Name: {self.name}\n Years Worked: {self.no_of_years}\n Employee Number: {self.employee_no}\n"
+
+
+class HolidayMixin: # 
+    """
+    Mixin to calculate holiday entitlement by years of service.
+    Note that a mixin has no __init__ as you cannot create an instance of a mixin
+    """
+    def calculate_holidays(self, no_of_years):
+        """
+        Method that returns holidays as an integer if given no of years of service
+        """
+        BASE_HOLIDAY = 20
+        bonus = 0
+        holidays = BASE_HOLIDAY
+        if no_of_years < 3:
+            bonus = holidays + 1
+        elif no_of_years <= 5:
+            bonus = holidays + 2
+        elif no_of_years > 5:
+            bonus = holidays + 3
+        return f'Holidays: {bonus}'
+
+
+class DirectDeveloper(HolidayMixin, Employee):
+    """
+    Class for direct developer employee inheriting from 
+    Employee class but also inheriting from HolidayMixin
+    """
+    def __init__(self, name, no_of_years, prog_lang):
+        self.prog_language = prog_lang
+        Employee.__init__(self, name, no_of_years)
+
+    def calculate_salary(self):
+        """
+        Returns salary plus bonus as an integer
+        """
+        base = 30000
+        if self.prog_language.lower() == 'python':
+            bonus = base * 0.10
+        else:
+            bonus = 0
+        return base + bonus
+
+    def get_details(self):
+        """
+        Method to return direct developer details as a string
+        Uses details() method inherited from Employee super class
+        """
+        return Employee.details(self) + f'Programming Language: {self.prog_language}'
+
+
+eric = DirectDeveloper("Eric Praline", 2, "python")
+
+# Prints out all the attributes of your eric instance using get_details method from DirectDeveloper
+# If you use the details method from Employee then the Programming Language will not print
+print(eric.get_details())
+# The mixin method is usable for instance eric
+print(eric.calculate_holidays(eric.no_of_years))
+# Uses the calculate_salary method from DirectDeveloper
+print(f'${eric.calculate_salary()}') # uses the calculate_salary method from DirectDeveloper
+
+luigi = DirectDeveloper("Luigi Vercotti", 10, "php")
+print(luigi.get_details())
+print(luigi.calculate_holidays(luigi.no_of_years))
+print(f'${luigi.calculate_salary()}')
+
+
+
+
 
 
 

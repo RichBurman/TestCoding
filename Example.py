@@ -1641,90 +1641,267 @@
 
 # Example 1 
 
-class Employee:
+# class Employee:
+#     """
+#     Base class for employees
+#     """
+#     # class attribute
+#     employee_no = 0
+
+#     def __init__(self, name, no_of_years):
+#         # instance attribute
+#         self.name = name
+#         self.no_of_years = no_of_years
+#         Employee.employee_no += 1 # increments the employee_no class attribute by 1
+#         self.employee_no = Employee.employee_no # sets the employee_no instance attribute to the value of the employee_no class attribute
+
+#     def details(self):
+#         """
+#         Method to return employee details as a string
+#         """
+#         return f"Name: {self.name}\n Years Worked: {self.no_of_years}\n Employee Number: {self.employee_no}\n"
+
+
+# class HolidayMixin: # 
+#     """
+#     Mixin to calculate holiday entitlement by years of service.
+#     Note that a mixin has no __init__ as you cannot create an instance of a mixin
+#     """
+#     def calculate_holidays(self, no_of_years):
+#         """
+#         Method that returns holidays as an integer if given no of years of service
+#         """
+#         BASE_HOLIDAY = 20
+#         bonus = 0
+#         holidays = BASE_HOLIDAY
+#         if no_of_years < 3:
+#             bonus = holidays + 1
+#         elif no_of_years <= 5:
+#             bonus = holidays + 2
+#         elif no_of_years > 5:
+#             bonus = holidays + 3
+#         return f'Holidays: {bonus}'
+
+
+# class DirectDeveloper(HolidayMixin, Employee):
+#     """
+#     Class for direct developer employee inheriting from 
+#     Employee class but also inheriting from HolidayMixin
+#     """
+#     def __init__(self, name, no_of_years, prog_lang):
+#         self.prog_language = prog_lang
+#         Employee.__init__(self, name, no_of_years)
+
+#     def calculate_salary(self):
+#         """
+#         Returns salary plus bonus as an integer
+#         """
+#         base = 30000
+#         if self.prog_language.lower() == 'python':
+#             bonus = base * 0.10
+#         else:
+#             bonus = 0
+#         return base + bonus
+
+#     def get_details(self):
+#         """
+#         Method to return direct developer details as a string
+#         Uses details() method inherited from Employee super class
+#         """
+#         return Employee.details(self) + f'Programming Language: {self.prog_language}'
+
+
+# eric = DirectDeveloper("Eric Praline", 2, "python")
+
+# # Prints out all the attributes of your eric instance using get_details method from DirectDeveloper
+# # If you use the details method from Employee then the Programming Language will not print
+# print(eric.get_details())
+# # The mixin method is usable for instance eric
+# print(eric.calculate_holidays(eric.no_of_years))
+# # Uses the calculate_salary method from DirectDeveloper
+# print(f'${eric.calculate_salary()}') # uses the calculate_salary method from DirectDeveloper
+
+# luigi = DirectDeveloper("Luigi Vercotti", 10, "php")
+# print(luigi.get_details())
+# print(luigi.calculate_holidays(luigi.no_of_years))
+# print(f'${luigi.calculate_salary()}')
+
+# Class Composition
+
+
+# # Example 1
+
+# class Vehicle:
+#     def __init__(self, make, model):
+#         self.make = make
+#         self.model = model
+
+# class Engine:
+#     def __init__(self, capacity, fuel):
+#         self.capacity = capacity
+#         self.fuel = fuel
+    
+# class InternalCombustion(Vehicle, Engine):
+#     def __init__(self, make, model, capacity, fuel):
+#         Vehicle.__init__(self, make, model)
+#         Engine.__init__(self, capacity, fuel)
+        
+# class Electric(Vehicle):
+#     def __init__(self, make, model):
+#         Vehicle.__init__(self, make, model)
+        
+# volkswagen = InternalCombustion("Volkswagen", "Golf", 1.7, "Diesel")
+# tesla = Electric("Tesla", "X")
+
+# Example 2
+
+# class Employee:
+#     """
+#     Base class for employees
+#     """
+#     # class attribute
+#     employee_no = 0
+
+#     def __init__(self, fname, sname, no_of_years):
+#         # instance attribute
+#         self.fname = fname
+#         self.sname = sname
+#         self.no_of_years = no_of_years
+#         Employee.employee_no +=1
+#         self.employee_no = Employee.employee_no
+
+#     def details(self):
+#         """
+#         Method to return employee details as a string
+#         """
+#         return f"First Name: {self.fname}\n Surname: {self.sname}\n Years Worked: {self.no_of_years}\n Employee Number: {self.employee_no}\n"
+
+# class ExternalContract:
+#     """
+#     Class for contract employees
+#     """
+
+#     def __init__(self, contract_cost):
+#         self.contract_cost = contract_cost
+
+#     def cost(self):
+#         """
+#         Returns the contract cost added to the salary
+#         """
+#         return self.contract_cost + 30000
+
+
+# class HolidayMixin:
+#     """
+#     Mixin to calculate holiday entitlement by years of service.
+#     """
+#     def calculate_holidays(self, no_of_years):
+#         """
+#         Returns holidays as an integer
+#         """
+#         BASE_HOLIDAY = 20
+#         bonus = 0
+#         holidays = BASE_HOLIDAY
+#         if self.no_of_years < 3:
+#             bonus = holidays + 1
+#         elif self.no_of_years <= 5:
+#             bonus = holidays + 2
+#         elif self.no_of_years > 5:
+#             bonus = holidays + 3
+#         return f'Holidays: {bonus}'
+
+
+# class DirectDeveloper(HolidayMixin, Employee):
+#     """
+#     Class for direct developer employee inheriting from 
+#     Employee class. 
+#     """
+#     def __init__(self, fname, sname, no_of_years, prog_lang):
+#         self.prog_language = prog_lang
+#         Employee.__init__(self, fname, sname, no_of_years)
+
+#     def calculate_salary(self):
+#         """
+#         Returns salary plus bonus as an integer
+#         """
+#         base = 30000
+#         if self.prog_language.lower() == 'python':
+#             bonus = base * 0.10
+#         else:
+#             bonus = 0
+#         return base + bonus
+
+#     def details(self):
+#         """
+#         Method to return direct developer details as a string
+#         """
+#         return Employee.details(self) + f'Programming Language: {self.prog_language}'
+
+
+# class ContractDeveloper(HolidayMixin, Employee, ExternalContract):
+#     """
+#     Class is subclass of Employee, composition relationship
+#     with ExternalContract and using HolidayMixin
+#     """
+#     def __init__(self, fname, sname, no_of_years, prog_language, contract_cost):
+#         self.prog_language = prog_language
+#         self.contract_cost = contract_cost
+#         Employee.__init__(self, fname, sname, no_of_years)   
+
+#     def details(self):
+#         """
+#         Returns inherited details plus contract cost
+#         """
+#         return Employee.details(self) + f'Programming Language: {self.prog_language}\n Contract cost: {ExternalContract.cost(self)}'
+
+
+# dev = DirectDeveloper("Eric", "Praline", 2, "python")
+# # There is no composition relationship here. A DirectDeveloper is an Employee
+# print(dev.details())
+# print(dev.calculate_holidays(dev.no_of_years))
+# print(f'${dev.calculate_salary()}')
+
+# contractor = ContractDeveloper("Luigi", "Vercotti", 10, "python", 100000)
+# # When the contractor details are printed the Contract cost is obtained from ExternalContract class
+# # There is a composition relationship as contractor has an ExternalContract
+# # However, an external contract is not an employee
+# # ExternalContract is an object that could be reused by many other objects. 
+# print(contractor.details())
+# # The mixin can also be used
+# print(contractor.calculate_holidays(contractor.no_of_years))
+
+# Example 3
+
+class TicketMixin:
     """
-    Base class for employees
+    Mixin to calculate ticket price based on age
     """
-    # class attribute
-    employee_no = 0
-
-    def __init__(self, name, no_of_years):
-        # instance attribute
-        self.name = name
-        self.no_of_years = no_of_years
-        Employee.employee_no += 1 # increments the employee_no class attribute by 1
-        self.employee_no = Employee.employee_no # sets the employee_no instance attribute to the value of the employee_no class attribute
-
-    def details(self):
-        """
-        Method to return employee details as a string
-        """
-        return f"Name: {self.name}\n Years Worked: {self.no_of_years}\n Employee Number: {self.employee_no}\n"
-
-
-class HolidayMixin: # 
-    """
-    Mixin to calculate holiday entitlement by years of service.
-    Note that a mixin has no __init__ as you cannot create an instance of a mixin
-    """
-    def calculate_holidays(self, no_of_years):
-        """
-        Method that returns holidays as an integer if given no of years of service
-        """
-        BASE_HOLIDAY = 20
-        bonus = 0
-        holidays = BASE_HOLIDAY
-        if no_of_years < 3:
-            bonus = holidays + 1
-        elif no_of_years <= 5:
-            bonus = holidays + 2
-        elif no_of_years > 5:
-            bonus = holidays + 3
-        return f'Holidays: {bonus}'
-
-
-class DirectDeveloper(HolidayMixin, Employee):
-    """
-    Class for direct developer employee inheriting from 
-    Employee class but also inheriting from HolidayMixin
-    """
-    def __init__(self, name, no_of_years, prog_lang):
-        self.prog_language = prog_lang
-        Employee.__init__(self, name, no_of_years)
-
-    def calculate_salary(self):
-        """
-        Returns salary plus bonus as an integer
-        """
-        base = 30000
-        if self.prog_language.lower() == 'python':
-            bonus = base * 0.10
+    def calculate_ticket_price(self, age):
+        if age < 12: # if age is less than 12
+            price = 0
+        elif age < 18: # if age is less than 18
+            price = 15
+        elif age < 60: # if age is less than 60
+            price = 20
         else:
-            bonus = 0
-        return base + bonus
+            price = 10 # if age is greater than 60
+        return price
 
-    def get_details(self):
-        """
-        Method to return direct developer details as a string
-        Uses details() method inherited from Employee super class
-        """
-        return Employee.details(self) + f'Programming Language: {self.prog_language}'
+class Customer(TicketMixin): # Customer inherits from TicketMixin
+    """
+    Create instance of Customer
+    """
+    def __init__(self, name, age): # Customer has a name and age
+        self.name = name
+        self.age = age
+        
+    def describe(self):
+        return f"{self.name} age {self.age} ticket price is {self.calculate_ticket_price(self.age)}" # uses the mixin method
+        
+customer = Customer("Ryan Phillips", 22) # creates an instance of Customer
+print(customer.describe()) # prints the result of the describe method
 
 
-eric = DirectDeveloper("Eric Praline", 2, "python")
-
-# Prints out all the attributes of your eric instance using get_details method from DirectDeveloper
-# If you use the details method from Employee then the Programming Language will not print
-print(eric.get_details())
-# The mixin method is usable for instance eric
-print(eric.calculate_holidays(eric.no_of_years))
-# Uses the calculate_salary method from DirectDeveloper
-print(f'${eric.calculate_salary()}') # uses the calculate_salary method from DirectDeveloper
-
-luigi = DirectDeveloper("Luigi Vercotti", 10, "php")
-print(luigi.get_details())
-print(luigi.calculate_holidays(luigi.no_of_years))
-print(f'${luigi.calculate_salary()}')
 
 
 

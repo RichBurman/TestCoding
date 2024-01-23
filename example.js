@@ -2,6 +2,8 @@
  * This is where I store my JavaScript coding notes and examples.
  */
 
+
+// to run this file, type node example.js in the terminal
 // JavaScript is a programming language that is used to create interactive effects within web browsers.
 
 // Variables in JavaScript
@@ -48,3 +50,23 @@
 
 //   // Both i and localVar have local scope
 // }
+
+// Example 3
+
+// // This is needed for the unit tests, do not remove it or you will fail!
+// "use strict";
+
+// const company = "Big Bucks co."; // this is a global variable
+// let profit = 900; // this is a global variable
+// let financeManager = "Richard"; // this is a global variable
+
+// if (profit < 1000) { // this is a local variable
+// 	var richardFired = true; // this is a local variable
+// 	financeManager = "Fay"; // this is a local variable
+// } 
+
+// console.log(company); // this is a global variable
+// console.log(financeManager); // this is a global variable
+// console.log(richardFired); // this is a global variable
+
+

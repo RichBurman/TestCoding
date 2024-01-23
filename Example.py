@@ -2420,3 +2420,147 @@ import math
 #         raise RuntimeError
 
 # choices(1)
+
+# Try Statements , In summary, the try block allows you to test a code block for errors. The except block enables you to handle the errors.
+
+# while True:
+#     try:
+#         x = int(input('Enter a number.'))
+#         print(f'Number is {x}')
+#     except ValueError:
+#         print('Not a number')
+
+# Example 2
+
+# cars = {'ford': 10, 'opel': 5 } #  dictionary of cars, key is the make and value is the number of cars
+
+# def get_val(key):
+#     try:
+#         return cars[key]
+#     except:
+#         return None
+
+# ford = get_val("ford")
+# print(ford)
+
+# hyundai = get_val("hyundai")
+# print(hyundai)
+
+# # If I wanted to get a list of all the types of cars 
+
+# cars = {'ford': 10, 'opel': 5 }
+
+# def get_all_types():
+#     return list(cars.keys())
+
+# car_types = get_all_types()
+# print(car_types)
+
+# # to print out the cars and their values
+
+# def print_car_info():
+#     for car_type, count in cars.items():
+#         print(f"{car_type}: {count} cars")
+
+# print_car_info()
+
+# Example 3
+
+# while True:
+#     try:
+#         a = int(input("Please enter an integer as the numerator: "))
+#         b = int(input("Please enter an integer as the denominator: "))
+#         print(a / b)
+#     except ZeroDivisionError:
+#         print("Please enter a valid denominator.")
+#     except ValueError:
+#         print("Both values have to be integers.")
+#     except Exception:
+#         print('Another error has occurred')
+
+
+# Example 4
+
+# try:
+#     print(non_existent_variable)
+# except NameError:
+#     print("Variable not defined")
+
+# Example 5
+
+#main.py
+    
+# def linecount(filename):
+#     """
+#     Counts the lines in a text file.
+#     Prints the opening line of a text file. 
+#     """
+#     try:
+#         f = open(filename, 'r') # opens the file in read mode
+#         s = f.readlines() # reads the file
+#     except OSError as e:
+#         # OSError exception is used as it deals with system errors such as I/O errors
+#         # OSError returns an error code (errno) and message (strerror)
+#         errno, strerror = e.args
+#         print(f"There is an I/O error number, {errno}: {strerror}.")
+#     else:
+#         # This is the code that does the line counting
+#         print(f'{filename} is {len(s)} line long.') # prints the number of lines in the file
+#         print(f"The opening line of {filename} is '{s[0]}'") # prints the opening line of the file
+#         f.close()
+#     finally:
+#         # This will print whether the line count has been successful or not
+#         print(f'Finished with {filename}.')
+    
+# linecount('gulliver.txt')
+# print("\n")
+# linecount('swift.txt')
+
+# gulliver.txt - which is 14 lines 
+
+# My father had a small estate in Nottinghamshire; I was the third of five
+# sons. He sent me to Emmanuel College in Cambridge at fourteen years old,
+# where I resided three years, and applied myself close to my studies;
+# but the charge of maintaining me, although I had a very scanty
+# allowance, being too great for a narrow fortune, I was bound apprentice
+# to Mr. James Bates, an eminent surgeon in London, with whom I continued
+# four years; and my father now and then sending me small sums of money, I
+# laid them out in learning navigation, and other parts of the mathematics
+# useful to those who intend to travel, as I always believed it would be,
+# some time or other, my fortune to do. When I left Mr. Bates, I went down
+# to my father, where, by the assistance of him, and my uncle John and
+# some other relations, I got forty pounds,[2] and a promise of thirty
+# pounds a year, to maintain me at Leyden. There I studied physic two
+# years and seven months, knowing it would be useful in long voyages.
+
+# This returns
+
+# gulliver.txt is 14 line long.
+# The opening line of gulliver.txt is 'My father had a small estate in Nottinghamshire; I was the third of five'
+# Finished with gulliver.txt.
+# There is an I/O error number, 2: No such file or directory: 'swift.txt'.
+# Finished with swift.txt.
+
+
+# Example 6
+
+cars = {'ford': 5, 'hyundai': 6}
+
+def update_cars(data, key, val):
+    try:
+        data[key]
+    except KeyError as e:
+        print(f"No key {e} in dictionary")
+    else:
+        data[key] = val
+    finally:
+        return data
+        
+update_cars(cars, "mazda", 8)
+        
+
+# Do Not Place Code Below This Line 
+# This will print out the cars dictionary after the update_cars function is called
+print(cars)
+
+

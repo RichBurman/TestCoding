@@ -2054,57 +2054,369 @@
 # print(parrot.description())
 
 
-# Example 4
+# # Example 4
 
-class Employee: # Employee is the superclass
-    """
-    Creates an instance of Employee
-    """
-    def __init__(self, name, annual_salary): # Employee has a name and annual salary
-        self.name = name
-        self.annual_salary = annual_salary
+# class Employee: # Employee is the superclass
+#     """
+#     Creates an instance of Employee
+#     """
+#     def __init__(self, name, annual_salary): # Employee has a name and annual salary
+#         self.name = name
+#         self.annual_salary = annual_salary
     
-    def calculate_monthly_salary(self): # Employee has a method to calculate monthly salary
-        return self.annual_salary / 12
+#     def calculate_monthly_salary(self): # Employee has a method to calculate monthly salary
+#         return self.annual_salary / 12
 
-class CustomerServiceEmployee(Employee): # CustomerServiceEmployee is a subclass of Employee
-    """
-    Creates an instance of CustomerServiceEmployee
-    """
-    def __init__(self, name, annual_salary, department): # CustomerServiceEmployee has a name, annual salary and department
-        super().__init__(name, annual_salary) # super() is used to denote what is inherited from Employee
-        self.department = department
+# class CustomerServiceEmployee(Employee): # CustomerServiceEmployee is a subclass of Employee
+#     """
+#     Creates an instance of CustomerServiceEmployee
+#     """
+#     def __init__(self, name, annual_salary, department): # CustomerServiceEmployee has a name, annual salary and department
+#         super().__init__(name, annual_salary) # super() is used to denote what is inherited from Employee
+#         self.department = department
 
-cs_manager = CustomerServiceEmployee("Kelly Johnson", 42000, "Customer Service") # creates an instance of CustomerServiceEmployee
-kellys_monthly_salary = cs_manager.calculate_monthly_salary() # uses the calculate_monthly_salary method from Employee
-print(kellys_monthly_salary) 
+# cs_manager = CustomerServiceEmployee("Kelly Johnson", 42000, "Customer Service") # creates an instance of CustomerServiceEmployee
+# kellys_monthly_salary = cs_manager.calculate_monthly_salary() # uses the calculate_monthly_salary method from Employee
+# print(kellys_monthly_salary) 
 
+# Importing
 
+# Example 1 
 
+# # main.py
 
-
-
-
-
-
-
+# from divide import division
 
 
+# print(division(4, 2))
+
+# # divide.py
+
+# def division(numerator, denominator):
+#     result = numerator / denominator
+#     return result
+
+# def mod(numerator, denominator):
+#     result = numerator % denominator
+#     return result
+
+# Example 2
+
+# import math
+
+# print(math.pi)
+
+# print(math.sqrt(4))
+
+# # Example 3
+
+# import math
+
+# num = 81.5
+
+# round_up = math.ceil(num)
+# print(round_up)
+# round_down = math.floor(num)
+# print(round_down)
+
+# square_root = math.sqrt(round_down)
+# print(square_root)
+
+# # Example 3
+
+# from datetime import datetime
+
+# x = datetime.now()
+# print(x)
+# print(x.year)
+# print(x.strftime("%A"))
+
+# the_date = datetime.now().date()
+# print(the_date)
+
+# the_time = datetime.now().time()
+# print(the_time)
+
+# # Example 4
+
+# from datetime import datetime
+
+# # write your code here
+
+# today = datetime.now().date()
+# print(today)
+
+# Example 5
+
+#main.py
+# f = open('source.txt')
+# lines = f.read()
+# f.close()
+# print(lines)
+
+# source.txt
+
+# The io.py library is a built-in library of tools in Python to work with data input and output. 
+
+# Example 6
+
+# # main.py
+# file = open('lyrics.txt')
+# lyrics = file.read()
+# file.close()
+# print(lyrics)
+
+# # lyrics.txt
+
+# Row, row, row your boat
+# Gently down the stream
+# Merrily merrily, merrily, merrily
+# Life is but a dream
+
+# os
+
+# The os library provides a way of using the operating system (os) functionality. The operating system is the software that interfaces between the hardware and user on a computer. 
+# Common operating systems would be Windows, macOS, Linux or iOS. A frequent use for this would be accessing the environment variables. 
+# Every computer has a set of environment variables listing information on how the machine is set up. Examples of this would be the directory structure of the home directory or the computers users profile.
 
 
+# Example 1
+
+# import os
+
+# # print(os.getcwd())
+# # print(os.listdir('/home/user'))
+
+# Example 2 
+
+# import os
+
+# # This is how you would join two paths in your code
+# print(os.path.join('/home/runner/', 'os'))
+
+# path = "/home/runner/os/main.py"
+# # Splits the path into a pair (head, tail) where the tail is the end of the pathname
+# # The tail is after the / and the head is the pathname up to that point 
+# (dirname, filename) = os.path.split(path)
+# print(f'The directory path is {dirname}')
+# print(f'The filename is {filename}')
+# # Splits the filename into a pair (root, ext)
+# # The root is before the dot and the ext contains the dot with the suffix after it
+# (module, extension) = os.path.splitext(filename)
+# print(f'The module is {module}')
+# print(f'Its file suffix is {extension}')
+
+# Random
+
+# Example 1
+
+# import random
+
+# print(f'A random float between 0 & 1.0: {random.random()}')
+# print(f'A random int between 0 & 10: {random.randrange(11)}')
+# print('A random choice from a list: ' + random.choice(['paper', 'scissors', 'rock']))
+# deck = ['hearts', 'diamonds', 'spades', 'clubs']
+# random.shuffle(deck)
+# print(deck)
 
 
+# Example 2
+
+# import random
+
+# def ten_rand_nums():
+#     numbers = []
+#     for x in range(10):
+#         numbers.append(random.randrange(101))
+#     return numbers
+    
+# result = ten_rand_nums()
+# print (f"Result list of 10 random numbers {result}")
+
+# random.shuffle(result)
+# print (f"Result list that has been shuffled {result}")
+    
+# Example 3
+
+# from dateutil import parser
+
+# log_line = 'INFO 2020-07-03T23:27:51 Shutdown complete.'
+
+# timestamp = parser.parse(log_line, fuzzy=True)
+# print(timestamp)
 
 
+# User Input
+
+# username = input("Type in your name and press return: ")
+# # The programme will remain stopped until you respond to this prompt with some text and press the return key
+# # As the value type that is received from an input is a string
+# # We need to convert it to a number to be able to use it on line 7
+# # We can do this by wrapping the input inside the int() method
+# age = int(input("Please enter your age: "))
+
+# days = 365 * age
+# # days is a number
+# # To concatenate it to the string we have to convert it to a String
+# # Notice below we do this like: str(days)
+# print("Hello " + username + ", you have been alive for at least " + str(days) + " days")
+
+# Example 2
+
+import math
+
+# i = 10 + 20
+# print(i)
+# language = "Python"
+# version = 3
+# print(f'We are using {language}{version}')
+# # Here the format specifier .2f is used to truncate at 2 decimal places
+# print(f'The value of pi to 2 decimal places is {math.pi:.2f}')
+# # The currency symbol for pounds sterling has Unicode character number 163
+# pound = chr(163)
+# tabulate = {'Egg & Spam': 1, 'Egg, Bacon & Spam': 1.5, 'Egg, Bacon Sausage & Spam': 2, }
+# # Loops over a dictionary of menu items as keys and prices as values
+# for item, price in tabulate.items():
+#     # The format specifiers here denote a minimum width of 25 and 5 characters
+#     print(f'{item:25} - {pound}{price:5}')
+
+# Example 3
+
+# for number in range(99, 0, -1): #   for number in range(99, 0, -1): 
+#     line_one = f"{number} bottle(s) of beer on the wall. {number} bottle(s) of beer"
+#     line_two = f"Take one down, pass it around. {number-1} bottle(s) of beer on the wall\n"
+
+#     print(line_one)
+#     print(line_two)
+
+# # Example 4
+
+# #main.py
+
+# f = open('data.txt', 'r')
+# lines = f.readlines()
+# f.close()
+# print(lines)
+
+# # data.txt
 
 
+# # This is the first line
+# # And this is the second
+# # Here is the third line
+# # And here the fourth
 
+# Example 5
 
+# main.py
 
+# import re
+# import collections
 
+# text = open('book.txt', 'r').read().lower() # read the file and convert to lowercase
+# words = re.findall('\w+', text) # find all words in the text
+# print(collections.Counter(words).most_common(10)) # count the 10 most common words
 
+# book.txt
 
+# IT was 2 p.m. on the afternoon of May 7, 1915. The _Lusitania_ had been
+# struck by two torpedoes in succession and was sinking rapidly, while
+# the boats were being launched with all possible speed. The women and
+# children were being lined up awaiting their turn. Some still clung
+# desperately to husbands and fathers; others clutched their children
+# closely to their breasts. One girl stood alone, slightly apart from
+# the rest. She was quite young, not more than eighteen. She did not seem
+# afraid, and her grave, steadfast eyes looked straight ahead.
 
+# “I beg your pardon.”
 
+# A man’s voice beside her made her start and turn. She had noticed the
+# speaker more than once amongst the first-class passengers. There had
+# been a hint of mystery about him which had appealed to her imagination.
+# He spoke to no one. If anyone spoke to him he was quick to rebuff the
+# overture. Also he had a nervous way of looking over his shoulder with a
+# swift, suspicious glance.
 
+# She noticed now that he was greatly agitated. There were beads of
+# perspiration on his brow. He was evidently in a state of overmastering
+# fear. And yet he did not strike her as the kind of man who would be
+# afraid to meet death!
 
+# “Yes?” Her grave eyes met his inquiringly.
+
+# He stood looking at her with a kind of desperate irresolution.
+
+# “It must be!” he muttered to himself. “Yes--it is the only way.” Then
+# aloud he said abruptly: “You are an American?”
+
+# “Yes.”
+
+# “A patriotic one?”
+
+# The girl flushed.
+
+# “I guess you’ve no right to ask such a thing! Of course I am!”
+
+# “Don’t be offended. You wouldn’t be if you knew how much there was at
+# stake. But I’ve got to trust some one--and it must be a woman.”
+
+# “Why?”
+
+# “Because of ‘women and children first.’” He looked round and lowered his
+# voice. “I’m carrying papers--vitally important papers. They may make all
+# the difference to the Allies in the war. You understand? These papers
+# have _got_ to be saved! They’ve more chance with you than with me. Will
+# you take them?”
+
+# The girl held out her hand.
+
+# “Wait--I must warn you. There may be a risk--if I’ve been followed. I
+# don’t think I have, but one never knows. If so, there will be danger.
+# Have you the nerve to go through with it?”
+
+# The girl smiled.
+
+# “I’ll go through with it all right. And I’m real proud to be chosen!
+# What am I to do with them afterwards?”
+
+# “Watch the newspapers! I’ll advertise in the personal column of the
+# _Times_, beginning ‘Shipmate.’ At the end of three days if there’s
+# nothing--well, you’ll know I’m down and out. Then take the packet to
+# the American Embassy, and deliver it into the Ambassador’s own hands. Is
+# that clear?”
+
+# “Quite clear.”
+
+# “Then be ready--I’m going to say good-bye.” He took her hand in his.
+# “Good-bye. Good luck to you,” he said in a louder tone.
+
+# Her hand closed on the oilskin packet that had lain in his palm.
+
+# The _Lusitania_ settled with a more decided list to starboard. In answer
+# to a quick command, the girl went forward to take her place in the boat.
+
+# # Example 6
+
+# def get_content(file): # function to open and read a file
+#     song = open(file, 'r') # opens the file in read mode
+#     lines = song.read() # reads the file
+#     song.close() # closes the file
+#     return lines # returns the contents of the file
+    
+# lyrics = get_content("lyrics.txt") # calls the function and passes the file name as an argument
+
+# print(lyrics) # prints the contents of the file
+
+# Runtime Errors
+
+# # Example 1 
+
+# def choices(n):
+#     if n == 1:
+#         print("First item chosen")
+#     elif n == 2:
+#         print("Second item chosen")
+#     else:
+#         raise RuntimeError
+
+# choices(1)

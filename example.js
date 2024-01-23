@@ -69,4 +69,66 @@
 // console.log(financeManager); // this is a global variable
 // console.log(richardFired); // this is a global variable
 
+// Strings
+
+// let quotes1 = "This string's got a single quote in it." // this is a valid string
+// let quotes2 = 'The developer said, "Strings are awesome!"'; // this is a valid string
+
+// Special String Characters 
+
+// Horizontal tab: \t
+// Newline: \n
+//Carriage return: \r
+// Single quote: \'
+// Double quote: \"
+// Backslash: \\
+
+
+// Template Literals
+
+// let name = "John";
+// let lastBroughtProduct = "biscuits";
+
+// let message = `${name} has bought ${lastBroughtProduct} in the past month.`;
+
+// console.log(message);
+
+// let fourthItem = 'Item 4';
+// let myHtml = `
+//   <ol class="item-list">
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+//     <li>Item 3</li>
+//     <li>${fourthItem}</li>
+//   </ol>
+// `;
+
+// console.log(myHtml);
+
+// // Example 1
+
+// let firstName = "Mike";
+// let email = "mike@email.com";
+
+// // Write your code here
+
+// let message = `Dear ${firstName},
+// Thank you for subscribing!
+// Your email: ${email}`;
+// console.log(message);
+
+// // Example 2
+
+// let name = "Jeff";
+// console.log("Hello, my name is " + name);
+
+// // example 3
+
+// let username = "Jack";
+
+// let message = "Welcome back " + username + "! You are now logged in.";
+// console.log(message);
+
+
+
 

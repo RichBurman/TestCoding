@@ -200,4 +200,92 @@
 // // This will log the emailAddress variable to the console
 // console.log(emailAddress);
 
+// // Data Types
 
+// // typeof 1;                        // "number"
+// typeof 'Hello world!';           // "string"
+// typeof true;                     // "boolean"
+// typeof ['a', 'b', 'c'];          // "object"
+// typeof {name: 'John', age: 30};  // "object"
+
+// // // Example 1
+
+// let itmOne = 10;
+// let itmTwo = '20';
+// let itmThree = true;
+
+// console.log(typeof itmOne); //  this is a number
+// console.log(typeof itmTwo); // this is a string
+// console.log(typeof itmThree); // this is a boolean
+// console.log(typeof (itmOne + itmTwo)); // this is a string because of the concatenation
+
+// Numbers
+
+// // Example 1
+
+// let myNumber = 123;
+
+// myNumber += 1;  // Adds 1, now myNumber is 124
+
+// // Declare another variable and multiply them
+// let multiplier = 2;
+// let product = myNumber * multiplier;
+// console.log(product);  // 248
+// console.log(typeof product);  // "number"
+
+// // Number("123");       // 123
+// Number(null);        // 0
+// Number(true);        // 1
+// Number("Hello!");    // NaN (Not a Number)
+// Number(1.8e308);     // Infinity
+// Number(-1.8e308);    // -Infinity
+
+// Numbers also have a number of methods and properties available for manipulating them and retrieving information about them. 
+// A table of the methods you'll most likely use in your everyday JavaScript development is below:
+
+// Method/Property	Purpose	Usage	Result
+// Number.isNaN()	Returns whether the passed value is Not a Number	isNaN("Hello!");	true
+// Number.isFinite()	Returns whether the passed value is finite	isFinite(Infinity);	false
+// Number.isInteger()	Returns whether the passed value is an integer	isInteger(123);	true
+// Number.parseFloat()	Attempts to convert the passed value to a float	parseFloat("123.45");	123.45
+// Number.parseInt()	Attempts to convert the passed value to an integer	parseInt("123.45");	123
+// The following are instance methods which operate on a Number instance
+// toFixed()	Returns a string representing the number with the passed number of decimal places	123.45.toFixed(4);	"123.4500"
+// toPrecision()	Returns a string representing the number with the passed precision	123.45.toPrecision(4);	"123.5"
+// toString()	Returns a string representing the number in the specified base (10 by default)	123.45.toString();	"123.45"
+
+
+// Example 2 
+
+// let first = "42";
+// let second = "24.7";
+
+// let result = first + second;
+// console.log(result)
+// /*
+// The console.log above will log "4224.7" to the console, because 
+// it is concatinating strings instead of adding the values together
+// */
+
+// let result2 = parseInt(first) + parseInt(second);
+// console.log(result2)
+// /* 
+// The console.log above will log 66 to the console, because both 
+// string values are converted to number types. However the second 
+// value has a decimal point, which means its value is rounded down to make a whole number because parseInt() was used, not parseFloat()
+// */
+
+// let result3 = parseInt(first) + parseFloat(second)
+// console.log(result3)
+// /* 
+// The console.log above will log 66.7 to the console. because now 
+// the second value is parsed to a float which allows for the decimal
+// point. 
+// */
+
+
+// Null and Undefined
+
+// null is used when you want to explicitly represent "nothing". 
+//It is often used as the indication that an object could exist, but currently explicitly does not. 
+// This is not the same as undefined, which means that an object does exist but it doesn't have any value associated with it.

@@ -289,3 +289,82 @@
 // null is used when you want to explicitly represent "nothing". 
 //It is often used as the indication that an object could exist, but currently explicitly does not. 
 // This is not the same as undefined, which means that an object does exist but it doesn't have any value associated with it.
+
+// example 1
+
+// let myVar = null;
+// console.log(Boolean(myVar));  // false
+
+// if (myVar) {
+//   // will not run; null is falsy
+// }
+
+// example 2
+
+// let x;
+// if (typeof x === "undefined") {
+//   // this will execute
+// }
+
+// example 3
+
+// javascript code
+
+// let admin = null;
+// console.log(admin);
+// let passwordRequired;
+// console.log(passwordRequired);
+
+// Infinity, -Infinity and NaN
+
+// Infinity is a special numeric value that represents infinity.
+// -Infinity is a special numeric value that represents negative infinity.
+// NaN is a special numeric value that represents Not-a-Number.
+
+// // example 1
+
+// let finite = isFinite(12345);
+// let infinite = isFinite(1.9e308);
+
+// console.log(finite);    // true
+// console.log(infinite);  // false
+
+// // example 2
+
+// let passingString = isNaN("hello!");
+// let passingNumber = isNaN(12345);
+// let passingNumberAsString = isNaN('12345');
+
+// console.log(passingString);          // true
+// console.log(passingNumber);          // false
+// console.log(passingNumberAsString);  // false ('12345' is coerced to a Number)
+
+// example 3
+
+// javascript code
+
+// let notANumber = isNaN('a');
+// console.log(notANumber);
+
+// let isANumber = isNaN(95);
+// console.log(isANumber);
+
+// let finiteNumber = isFinite(45);
+// console.log(finiteNumber);
+
+// let notAFiniteNumber = isFinite(1/0);
+// console.log(notAFiniteNumber);
+
+// example 4
+
+// javascript code
+
+// let num100 = 100;
+// let str100 = "100";
+// console.log(num100 == str100);
+// console.log(num100 === str100);
+// console.log(num100 + str100);
+// console.log(num100 + Number(str100));
+
+// Storing values with operators
+

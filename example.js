@@ -663,5 +663,207 @@ if (ready) {
 
 // console.log(result);
 
+// Terinary Expressions is a shortcut for if/else statements
+
+// Standard conditional statement:
+
+// if (condition) {
+  // code if true
+// } else {
+  // code if false
+// }
+// Equivalent ternary expression:
+
+// Boolean Expression ? code if true : code if false
+
+// condition ? code if true : code if false
+
+// // example 1
+
+// this is the shorthand version of if/else statements
+
+// // let memberType = 'basic'; 
+// let price = memberType === 'basic' ? 5 : 10;
+
+// this is the long-hand version of if/else statements
+
+// // let memberType = 'basic';
+// let price;
+
+// if (memberType === 'basic') {
+//   price = 5;
+// } else {
+//   price = 10;
+// }
+
+// Expressions can be chained together using else if:
+
+// // let memberType = 'elite';
+// let price = memberType === 'basic' ? 5
+// : memberType === 'pro' ? 10
+// : memberType === 'elite' ? 20
+// : 0;
+
+// // example 2
+
+// let a = 10;
+// let b = 20;
+// let result;
+
+// // Write your code below this line. 
+
+// result = (a < b) ? 'a is smaller' : 'a is not smaller';
+
+// console.log(result);
+
+// If/Else If/Else Statements
+
+// Example 1
+
+// if (condition 1) {
+//     // condition 1 true code
+//   } else if (condition 2) {
+//     // condition 2 true code
+//   } else if (condition 3) {
+//     // condition 3 true code
+//   } else if (condition n) {
+//     // condition n true code
+//   } else {
+//     // default code
+//   }
+
+// Example 2
+
+// let memberType = 'elite';
+// let price;
+
+// if (memberType === 'basic') {
+//   price = 5;
+// } else if (memberType === 'pro') {
+//   price = 10;
+// } else if (memberType === 'elite') {
+//   price = 20;
+// } else {
+//   price = 0;
+// }
+// console.log(price);  // 20
+
+// // example 3
+
+// // javascript code
+
+// let age = 15;
+// let result;
+
+// if (age > 21) {
+//     result = "drink whiskey";
+// } else if (age >= 18) {
+//     result = "drink beer";
+// } else if (age > 12) {
+//     result = "drink cola";
+// } 
+// else {
+//     result = "drink apple juice";
+// }
+
+// console.log(result);
+
+// Switch Statements
+
+// swtich statements are used to perform different actions based on different conditions. 
+
+// // switch (expression) {
+//   case 'value1':
+//     // code block 1
+//     break;
+//   case 'value2':
+//     // code block 2
+//     break;
+//   case 'valuen':
+//     // code block n
+//     break;
+//   default:
+//     // default result
+// }
+
+
+// // let day;
+// let dayNumber = 2;
+
+// switch (dayNumber) {
+//   case 0:
+//     day = 'Sunday';
+//     break;
+//   case 1:
+//     day = 'Monday';
+//     break;
+//   case 2:
+//     day = 'Tuesday';
+//     break;
+//   case 3:
+//     day = 'Wednesday';
+//     break;
+//   case 4:
+//     day = 'Thursday';
+//     break;
+//   case 5:
+//     day = 'Friday';
+//     break;
+//   case 6:
+//     day = 'Saturday';
+//     break;
+//   default:
+//     day = 'Invalid day number';
+// }
+
+// console.log(day);  // Tuesday
+
+// example 2
+
+// function findDayOfWeek(dayNumber) {
+//     switch (dayNumber) {
+//       case 0:
+//         return 'Sunday';
+//       case 1:
+//         return 'Monday';
+//       case 2:
+//         return 'Tuesday';
+//       case 3:
+//         return 'Wednesday';
+//       case 4:
+//         return 'Thursday';
+//       case 5:
+//         return 'Friday';
+//       case 6:
+//         return 'Saturday';
+//       default:
+//         return 'Invalid day number';
+//     }
+//   }
+//   let day = findDayOfWeek(2);
+//   console.log(day);  // Tuesday
+
+// example 3
+
+// let result = ''; // Do not change this. You assign to this variable within the switch statement.
+// let errorType = "page";
+
+// // write your code here
+
+// switch (errorType) {
+//     case "username":
+//         result =  "That username is incorrect, please try again.";
+//         break;
+//     case "password":
+//         result = "Incorrect password, please try again.";
+//         break;
+//     case "page":
+//         result = "Sorry this page doesn't exist.";
+//         break;
+//     default:
+//         result = "Error message unknown";
+// }
+
+// console.log(result);
 
 

@@ -867,3 +867,46 @@ if (ready) {
 // console.log(result);
 
 
+// Nested if/Else Statements
+
+// example layout 
+
+// if (condition) {
+//   // nested code
+//   // can be multiple lines
+//   // all this executes if the condition is true
+// } else {
+//   // nested code
+//   // otherwise, all this code executes
+// }
+
+// example 1
+
+// if (condition) {
+
+//   if (anotherCondition) {
+//     // executes if both condition and anotherCondition are true
+//   } else {
+//     // executes if condition is true and anotherCondition is false
+//   }
+
+// } else {
+//   // executes if condition is false
+// }
+
+// Example 2
+
+let user = true;
+let emailVerified = false;
+
+if(user) { // if user is true
+  if(emailVerified) { // if emailVerified is true
+    console.log('Welcome to our web-site'); // this will run
+  } else { // if emailVerified is false
+    console.log('Please verify your email'); // this will run
+  }
+}  else { // if user is false
+  console.log('You need to be a user to visit this page'); // this will run
+}
+
+// For Loops 

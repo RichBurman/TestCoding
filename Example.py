@@ -2544,23 +2544,25 @@ import math
 
 # Example 6
 
-cars = {'ford': 5, 'hyundai': 6}
+# cars = {'ford': 5, 'hyundai': 6}
 
-def update_cars(data, key, val):
-    try:
-        data[key]
-    except KeyError as e:
-        print(f"No key {e} in dictionary")
-    else:
-        data[key] = val
-    finally:
-        return data
+# def update_cars(data, key, val):
+#     try:
+#         data[key]
+#     except KeyError as e:
+#         print(f"No key {e} in dictionary")
+#     else:
+#         data[key] = val
+#     finally:
+#         return data
         
-update_cars(cars, "mazda", 8)
+# update_cars(cars, "mazda", 8)
         
 
-# Do Not Place Code Below This Line 
-# This will print out the cars dictionary after the update_cars function is called
-print(cars)
+# # Do Not Place Code Below This Line 
+# # This will print out the cars dictionary after the update_cars function is called
+# print(cars)
+
+
 
 

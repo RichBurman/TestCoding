@@ -488,6 +488,39 @@
 // num--;
 // console.log(num);
 
+// Comparison Operators
+
+// // example 1
+
+// let canVote = false;
+// let age = 19;
+
+// if (age >= 18) {
+//   canVote = true;
+// }
+// console.log(canVote);  // true
+
+// Operator	Description	JavaScript Example	Returns
+// ==	Equal to (loose equality)	console.log(1 == 1)	true
+// ===	Equal to (strict equality)	console.log(1 === "1")	false
+// !=	Not equal to (loose equality)	console.log(1 != 1)	false
+// !==	Not equal to (strict equality)	console.log(1 !== "1")	true
+// >	Greater than	console.log(2 > 1)	true
+// <	Less than	console.log(2 < 1)	false
+// >=	Greater than or equal to	console.log(2 >= 1)	true
+// <=	Less than or equal to	console.log(2 <= 1)	false
 
 
+// example 2
 
+// let varOne = 1 === 2; 
+// console.log(varOne);
+
+// let varTwo = 1 !== 2;
+// console.log(varTwo);
+
+// let varThree = 1 > 2;
+// console.log(varThree);
+
+// let varFour = 1 <= 2;
+// console.log(varFour);

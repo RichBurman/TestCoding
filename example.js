@@ -622,6 +622,46 @@ if (ready) {
 // console.log(varC === varD);
 // console.log(varC == varE);
 
+// If/Else Statements
+
+
+// // if (condition) {
+//   // code if true
+// } else {
+//     // code if false
+//   }
+
+// example 1 
+
+// let a = 1;
+// let b = 2;
+// let firstGreater;
+
+// if (a > b) {
+//   firstGreater = true; 
+// } else {
+//   firstGreater = false;
+// }
+// console.log(firstGreater);
+
+
+// example 2 
+
+// let a = 10;
+// let b = 20;
+// let result;
+
+// // Write your if statement here:
+
+// if (a < b) {
+//     result = 'a is smaller';
+// }
+// else {
+//     result = 'a is not smaller';
+// }
+
+
+// console.log(result);
 
 
 

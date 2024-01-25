@@ -524,3 +524,104 @@
 
 // let varFour = 1 <= 2;
 // console.log(varFour);
+
+// Determining Truth 
+
+// && (AND): returns true only if all operands are true
+// || (OR): returns true if any of the operands are true
+// ! (NOT): negates the operand it's used on
+
+// example 1
+
+let usernameCorrect = true;
+let passwordCorrect = false;
+let connected = true;
+let ready = usernameCorrect && passwordCorrect && connected;
+
+if (ready) {
+  console.log('Ready to go!');
+}
+
+
+// The && Operator: this operator returns true only if all operands are true.
+
+// a	b	a && b
+// true	true	true
+// true	false	false
+// false	true	false
+// false	false	false
+
+// The || Operator: this operator returns true if any of the operands are true.
+
+// a	b	a || b
+// true	true	true
+// true	false	true
+// false	true	true
+// false	false	false
+
+// The ! Operator: this operator negates the operand it's used on.
+
+// a	!a
+// true	false
+// false	true
+
+// example 2
+
+// let passport = true;
+// let ticket = true;
+// let weapons = false;
+// let a = 10;
+// let b = 5;
+
+// let either = a > 10 || b <= 5 ; // either a is greater than 10 or b is less than or equal to 5
+
+// let getOnFlight = passport && ticket && !weapons; // you can get on the flight if you have a passport and a ticket and no weapons
+
+// console.log(either); // true
+// console.log(getOnFlight); // true
+
+// Equality vs Strict Equality
+
+// Equality (==): this operator checks if the operands are equal, and if they are, returns true.
+// Strict Equality (===): this operator checks if the operands are equal and of the same type, and if they are, returns true.
+// is checks whether the operands are equal and of the same type, and if they are, returns true.
+
+
+// == (Loose Equality): Compares values after coercing them to compatible types
+// === (Strict Equality): Compares values without type coercion, comparing the data type as well
+
+// example 1
+
+// let a = 1;
+// let b = "1";
+
+// a == b   // true
+// a === b  // false
+
+// When using ==, the first number is coerced to a string before the comparison takes place, 
+// which causes JavaScript to determine that 1 (a number) and "1" (a string) are equal. 
+// In reality, they are not equal. The two values were coerced to the same type. 
+// The strict equality operator does not do this, and thus returns false because a string and a number are different data types. 
+// In short, you should always use strict equality (===) for testing equality in JavaScript unless you have a specfic reason not to.
+
+// The Object.is() operator takes two parameters which are the two objects to compare, 
+// and returns a boolean depending on whether they are the same object.
+
+// // example 2
+
+// let varA = '10';
+// let varB = 10;
+
+// let varC = "";
+// let varD = 0;
+// let varE = 1;
+
+// console.log(varA == varB);
+// console.log(varA === varB);
+// console.log(varC == varD);
+// console.log(varC === varD);
+// console.log(varC == varE);
+
+
+
+

@@ -368,3 +368,126 @@
 
 // Storing values with operators
 
+// Storing Values
+
+// Operator	Description	Example	Same As
+// =	Assignment	let x = 5;	x = 5
+// +=	Addition Assignment	x += 3	x = x + 3
+// -=	Subtraction Assignment	x -= 3	x = x - 3
+// *=	Multiplication Assignment	x *= 3	x = x * 3
+// /=	Division Assignment	x /= 3	x = x / 3
+// %=	Remainder Assignment	x %= 3	x = x % 3
+// **=	Exponentiation Assignment	x **= 3	x = x ** 3
+
+// Example 1
+
+// let x = 10; 
+
+// x += 1;   // 10 + 1 = 11
+// x -= 1;   // 10 - 1 = 9
+// x *= 2;   // 10 * 2 = 20
+// x /= 2;   // 10 / 2 = 5
+// x %= 3;   // 10 % 3 = 1 (returns the remainder of 10/3 = 1)
+// x **= 3;  // 10 ** 3 = 1000 
+
+// javascript code
+
+// let num = 10;
+// console.log(num);
+// num += 10;
+// console.log(num);
+// let numB = 10;
+// console.log(numB);
+// numB *= 10;
+// console.log(numB);
+
+// PEMDAS and Operator Precedence 
+
+// PEMDAS is an acronym that stands for Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.
+
+// With arithmetic operators it's important to remember the order of operations, PEMDAS. 
+// In JavaScript the rules are the same as in the mathematics you learned growing up, that is, there is a predecence to each operator. In order:
+
+// PE: Parentheses and exponents
+// MD: Multiplication and Division
+// AS: Addition and subtraction
+
+// Example 1
+
+// let x = 2;
+// let y = 3;
+// let z = 4;
+
+// console.log(x + y * z);  // 2 + 12 = 14
+// console.log((x+y) * z);  // 5 * 4 = 20
+
+
+// Operator	Description	Usage	Example
+// +	Addition	result = a + b	2 + 2 = 4
+// -	Subtraction	result = a - b	2 - 2 = 0
+// *	Multiplication	result = a * b	2 * 5 = 10
+// /	Division	result = a / b	10 / 2 = 5
+// **	Exponentiation	result = a ** b	2 ** 3 = 8  // 2 to the power of 3 which means 2 * 2 * 2 
+// %	Modulo (returns the remainder)	result = a % b	10 % 4 = 2 // 10 divided by 4 leaves a remainder of 2
+
+// Incrementing and Decrementing
+
+// i++ // increment by 1
+// ++i // increment by 1
+// i-- // decrement by 1
+// --i // decrement by 1
+
+// Without Increment Operator:
+
+// let x = 1;
+// x = x + 1;
+// With Increment Operator:
+
+// let x = 1;
+// x++;
+
+// Adding up 
+// for (let x = 0; x < 10; x++){
+//     console.log(x);
+//   }
+
+
+// Subtracting down
+//   for (let x = 10; x >= 0; x--){
+//     console.log(x);
+//   }
+
+// You can use the increment and decrement operators to declare a new variable and increment/decrement the original one simultaneously, too, 
+// by using them either as a prefix or a postfix. If used postfix, with operator after operand (for example, x++), 
+// the increment operator increments and returns the value before incrementing. 
+//If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing. 
+// The following examples are from the MDN website article on incrementing:
+
+// Postfixing:
+
+// let x = 3;
+// y = x++;
+
+// // y = 3
+// // x = 4
+// Prefixing:
+
+// let x = 3;
+// y = ++x;
+
+// // y = 4
+// // x = 4
+
+
+// // Example 1
+
+// let num = 10;
+// console.log(num);
+// num++;
+// console.log(num);
+// num--;
+// console.log(num);
+
+
+
+

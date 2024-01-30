@@ -1813,3 +1813,68 @@ if (ready) {
 // let randomNumber = Math.floor(Math.random() * maxNumber);
 // console.log(randomNumber);
 
+// Working with Date Objects
+
+// let date = new Date();
+// console.log(date);  
+
+// let rightNow = Date.now()
+// console.log(rightNow); 
+
+// let today = Date.now();
+// let tomorrow = today + 86400000;  // 86400000 milliseconds in 1 day
+
+// console.log(today);  // 1596477706417
+// console.log(tomorrow);  // 1596564106417
+
+// Human readable dates
+
+// let today = Date.now();
+// let tomorrow = today + 86400000;  // 86400000 milliseconds in 1 day
+
+// let todayDate = new Date(today);
+// let tomorrowDate = new Date(tomorrow);
+
+// console.log(todayDate.toDateString());  // today date
+// console.log(tomorrowDate.toDateString());  // Tomorrow date
+
+// today = new Date();
+
+// // Now we can operate on it:
+// console.log(today.getFullYear());      // The 4 digit year
+// console.log(today.getMonth());         // The month (0-11)
+// console.log(today.getDate());          // The day of the month (1-31)
+// console.log(today.getDay());           // The day of the week (0-6)
+// console.log(today.getHours());         // The hour (0-23)
+// console.log(today.getMinutes());       // The minute (0-59)
+// console.log(today.getSeconds());       // The seconds (0-59)
+// console.log(today.getMilliseconds());  // The milliseconds (0-999)
+
+// // This provides the UTC date and time:
+
+// today = new Date(today);
+
+// // Now we can operate on it:
+// console.log(today.getUTCFullYear());      // The 4 digit year
+// console.log(today.getUTCMonth());         // The month (0-11)
+// console.log(today.getUTCDate());          // The day of the month (1-31)
+// console.log(today.getUTCDay());           // The day of the week (0-6)
+// console.log(today.getUTCHours());         // The hour (0-23)
+// console.log(today.getUTCMinutes());       // The minute (0-59)
+// console.log(today.getUTCSeconds());       // The seconds (0-59)
+// console.log(today.getUTCMilliseconds());  // The milliseconds (0-999)
+
+// Example 2
+
+// let today = 1597673635658;
+
+// let date = new Date(today);
+// let day = date.getDate();
+// let month = date.getMonth();
+// let year = date.getFullYear();
+
+// console.log(day);
+// console.log(month);
+// console.log(year);
+
+

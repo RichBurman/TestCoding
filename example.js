@@ -1667,3 +1667,149 @@ if (ready) {
 // console.log(studentData);
 
 
+// Function in JavaScript
+
+// Example 1
+
+// function printString() {
+//   console.log('Hello world!');
+// }
+
+// printString();
+
+// Example 2
+
+// function printString(message) {
+//   console.log(message);
+// }
+// printString('Hello from the function!');
+
+// Example 3
+
+// function addTwo(num1, num2) {
+//   return num1 + num2;
+// }
+// addTwo(3, 5);
+
+// Example 4
+
+// function addTwo(num1, num2) {
+//   return num1 + num2;
+// }
+// let sum = addTwo(3, 5);
+// console.log(sum);  // 8
+
+// Example 5
+
+// // Define an array of arrays (nested data structure)
+// let operands = [
+//   [3, 5],
+//   [8, 6],
+//   [1, 2],
+//   [9, -2]
+// ];
+
+// // Define a function with parameters
+// function addTwo(num1, num2) {
+//   return num1 + num2;
+// }
+
+// // Create an empty array to hold the sums
+// let sums = [];
+
+// // Use a for loop to iterate the operands and call addTwo()
+// for (let pair of operands) {
+//   let sum = addTwo(pair[0], pair[1]);  // array indexing + function call
+//   sums.push(sum);  // array methods
+// }
+
+// // Log the sums
+// console.log(sums);
+
+// Approach to writing functions
+
+// function buildHelloArray(num) {
+//   let myArray = [];
+//   for (let i = 0; i < num; i++) {
+//     myArray.push('Hello');
+//   }
+//    return myArray;
+// }
+
+// let result = buildHelloArray(20);
+// console.log(result);
+
+// Example 2
+
+
+// function addTwoNumbers(num1, num2) {
+//   return num1 + num2;
+// }
+
+// result = addTwoNumbers(40, 2);
+// console.log(result);
+
+// Maths in JavaScript
+
+// let result = Math.random();
+// console.log(result);
+
+// let someInteger = Math.floor(25.65); // rounds down
+// console.log(someInteger);  // 25
+
+// let someInteger = Math.ceil(25.65); // rounds up
+// console.log(someInteger);  // 26
+
+// let numbers = [];
+// for (let i = 0; i < 10; i++) {
+//   numbers.push(Math.floor(Math.random() * 100));
+// }
+// console.log(numbers);
+
+// If you need standard rounding you can use the Math.round() function, 
+// which returns the number you provide rounded to the nearest integer:
+
+// console.log(Math.round(1.25));  // 1
+// console.log(Math.round(1.65));  // 2
+
+// Math.min() and Math.max() are useful for finding the minimum and maximum values in an array:
+
+// console.log(Math.min(1, 2, 3));  // 1
+// console.log(Math.max(1, 2, 3));  // 3
+
+// // If one of the objects can't be converted, the result is NaN:
+// console.log(Math.min(1, 2, 'Hello!'));  // NaN
+// console.log(Math.max(1, 2, 'Hello!'));  // NaN
+
+// // If you give .min() nothing, you get Infinity:
+// console.log(Math.min());  // Infinity
+
+// // If you give .max() nothing, you get -Infinity:
+// console.log(Math.max());  // -Infinity
+
+// Math.pow() is useful for calculating exponents:
+
+// console.log(Math.pow(2, 4));  // 16
+// console.log(Math.pow(3, 3));  // 27
+
+// // Negative bases to fractional exponents return NaN:
+// console.log(Math.pow(-7, 1/3));  // NaN
+
+// Finally, to get the square root of a number you can use Math.sqrt():
+
+// console.log(Math.sqrt(4));  // 2
+// console.log(Math.sqrt(9));  // 3
+// console.log(Math.sqrt(2));  // 1.4142135623730951
+
+// console.log(Math.sqrt(0));  // 0
+// console.log(Math.sqrt(-0));  // -0
+// console.log(Math.sqrt(-1));  // NaN
+
+// Example 2
+
+// let maxNumber = Math.max(7, 4, 8, 11, 5, 2);
+// console.log(maxNumber);
+
+// let randomNumber = Math.floor(Math.random() * maxNumber);
+// console.log(randomNumber);
+

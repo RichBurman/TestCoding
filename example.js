@@ -896,17 +896,50 @@ if (ready) {
 
 // Example 2
 
-let user = true;
-let emailVerified = false;
+// let user = true;
+// let emailVerified = false;
 
-if(user) { // if user is true
-  if(emailVerified) { // if emailVerified is true
-    console.log('Welcome to our web-site'); // this will run
-  } else { // if emailVerified is false
-    console.log('Please verify your email'); // this will run
-  }
-}  else { // if user is false
-  console.log('You need to be a user to visit this page'); // this will run
+// if(user) { // if user is true
+//   if(emailVerified) { // if emailVerified is true
+//     console.log('Welcome to our web-site'); // this will run
+//   } else { // if emailVerified is false
+//     console.log('Please verify your email'); // this will run
+//   }
+// }  else { // if user is false
+//   console.log('You need to be a user to visit this page'); // this will run
+// }
+
+// For Loops are used to execute a block of code a number of times.
+
+// // Example 1
+
+// let fruits = ['apples', 'oranges', 'bananas', 'cherries'];
+// let numberOfFruits = fruits.length;
+
+// for (let i = 0; i < numberOfFruits; i++) {
+//   console.log(fruits[i] + ' are delicious!');
+// }
+
+// console.log('I love fruit!');
+
+// In the example we first declare an array of fruits, then store the array's length in a variable called numberOfFruits. 
+// Knowing the length of the array, we decide we want to iterate through each fruit, 
+// say it's delicious and then print "I love fruit!" when the loop is complete. 
+// To do this the initializingExpression sets a variable i to 0, which is the first index in the array ('apples'). 
+// The condition being checked is whether i is less than the total number of fruits (4), 
+// and we need to use less than here rather than less than or equal to, 
+// because when i is equal to 4 the loop will try to get fruits[4] which doesn't exist. 
+// Remember that the indexes start with zero, so the fourth fruit is actually index 3. 
+// After each iteration of the loop, the incrementingExpression increments i by one using the increment operator (++). 
+// Finally, when i is no longer less than 4, loop iteration is complete so control returns to the global scope 
+// and prints "I love fruit!".
+
+// Example 2
+
+let numbers = [42, 65, 0, 9, 73, 10, 11, 44];
+
+// Write your code here
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i] + 10);
 }
-
-// For Loops 

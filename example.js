@@ -1012,3 +1012,106 @@ if (ready) {
 
 // console.log("Upload attempts exceeded maximum");
 
+// Break and Continue
+
+// break: breaks out of the loop entirely.
+// continue: continues with the next iteration of the loop, effectively "skipping" an iteration.
+
+// Example 1
+
+// let i = 0;
+// while (i <= 1000000) {
+//   if (i === 5) {
+//     console.log('Breaking!');
+//     break;
+//   }
+//   console.log(i);
+//   i++;
+// }
+// console.log('Loop has been broken.');
+
+// // Example 2 
+
+// for (let i = 0; i <= 1000000; i++) { // same as while loop above
+//   if (i === 5) {
+//     console.log('Breaking!');
+//     break;
+//   }
+//   console.log(i);
+// }
+// console.log('Loop has been broken.');
+
+// Example 3
+
+// for (let i = 0; i <= 10; i++) { // same as while loop above
+//   if (i % 2 !== 0) { // if i is not even
+//     continue; // skip the rest of the loop body
+//   }
+//   console.log(i); // 0, 2, 4, 6, 8, 10
+// }
+// console.log('Loop complete.'); // this will still run
+
+// Labelling
+
+
+// let i = 0;
+// iLoop:
+//   while (i <= 1000000) {
+//     let j = 0;
+//     jLoop:
+//       while (j <= 100) {
+//         if (j === 3) {
+//           console.log('Breaking the outer loop from the inner loop.');
+//           break iLoop;
+//         }
+//         console.log('j is', j);
+//         j++;
+//       }
+
+//     if (i === 5) {
+//       console.log('Breaking!');
+//       break;
+//     }
+
+//     console.log('i is', i);
+//     i++;
+//   }
+// console.log('Loop has been broken.');
+
+
+// This example is a little more complex, but we can break it down: The outer loop is set to iterate from 0 to 1 million. 
+// If it encounters 5, the if statement within the outer loop will break it. However, before it hits this if statement, 
+// there is another while loop set to iterate a variable j from 0 to 100. 
+// Within that loop is an if statement that checks each iteration to see if j === 3. 
+// If that condition is true it will break the outer loop using the label iLoop!
+
+// When the outer loop is originally created it is given a label of iLoop. 
+// If we had simply used break; inside the inner loop rather than break iLoop;, 
+// it would have broken the inner loop (the one labelled jLoop) and continued with the outer one. 
+// The if statement checking whether i === 5 would still have broken the outer loop at that point, 
+// but using a label allowed us to break it from inside another loop. 
+
+// Example 2
+
+// javascript code
+
+for (let x = 0; x <= 20; x++) {
+
+  if(x % 2 == 1){
+          continue;
+  }
+  
+  if(x == 10) {
+      break;
+  }
+  console.log(x);
+  }
+  
+  // Nested Iteration
+
+  
+  
+  
+  
+  
+

@@ -934,12 +934,35 @@ if (ready) {
 // Finally, when i is no longer less than 4, loop iteration is complete so control returns to the global scope 
 // and prints "I love fruit!".
 
+// // Example 2
+
+// let numbers = [42, 65, 0, 9, 73, 10, 11, 44];
+
+// // Write your code here
+
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i] + 10);
+// }
+
+// While Loops
+
+// Example 1
+
+let fruits = ['apples', 'oranges', 'bananas', 'cherries'];
+let numberOfFruits = fruits.length;
+
+let i = 0;
+while (i < numberOfFruits) {
+  console.log(fruits[i] + ' are delicious!');
+  i++;
+}
+
+console.log('I love fruit!');
+
 // Example 2
 
-let numbers = [42, 65, 0, 9, 73, 10, 11, 44];
-
-// Write your code here
-
-for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i] + 10);
-}
+let i = 0; // initializingExpression
+while (i <= 10) { // condition
+    console.log(i); // code block
+    i += 1; // incrementingExpression
+} // loop ends

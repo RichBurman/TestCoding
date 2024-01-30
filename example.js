@@ -1374,15 +1374,296 @@ if (ready) {
 
 // console.log(data);
 
+// Object Methods
+
+// Objects in JavaScript have three types of methods:
+
+// Static methods are methods that are called directly on the object, like Object.keys().
+// Instance methods are methods that are called on an instance of an object, like 'Hello'.toUpperCase().
+// Methods you create are methods that you create yourself and add to the object.
+
+// Firstly we create an object
+
+// let car = {
+//   location: 'garage',
+//   ignition: 'off',
+//   fueled: true,
+// };
+
+// Static Methods
+
+// console.log(Object.keys(car));
+// returns ["location", "ignition", "fueled"]
+
+// Unsupported on JavaScript Tutor
+// console.log(Object.values(car));
+// returns ["garage", "off", true]
+
+// console.log(Object.entries(car));  
+// returns [Array(2), Array(2), Array(2)]
+// Expanded view of the three arrays:
+// 0: (2) ["location", "garage"]
+// 1: (2) ["ignition", "off"]
+// 2: (2) ["fueled", true]
 
 
+// Instance Methods
+
+// console.log(car.hasOwnProperty('ignition'));  // true
+// console.log(car.hasOwnProperty('drive'));  // false
+// console.log(car.toString()); // [object Object]
+
+// Methods You Create
+
+// let car = {
+//   location: 'garage',
+//   ignition: 'off',
+//   fueled: true,
+//   start: function() { // this is a method
+//     this.ignition = 'on'; // this refers to the object
+//   }
+// };
+
+// console.log(car.ignition); // 'off'
+// car.start(); // call the method
+// console.log(car.ignition); // 'on'
+
+// In a method, this refers to the object that owns the method. 
+//If the method isn't owned by any object, then this refers to the global object.
+
+// In an event (like when a user clicks on something), 
+// this refers to the element that received the event (e.g. the thing they clicked on).
+
+// To develop this idea further 
+
+// let car = {
+//   location: 'garage',
+//   ignition: 'off',
+//   fueled: true,
+//   start: function() {
+//     this.ignition = 'on';
+//   },
+//   drive: function() {
+//     this.location = 'street';
+//   },
+//   park: function() {
+//     this.location = 'garage';
+//   },
+//   refuel: function() {
+//     this.location = 'gas station';
+//     this.fueled = true;
+//   },
+//   stop: function() {
+//     this.ignition = 'off';
+//   },
+// };
+
+// car.start();
+// console.log(car.ignition);
+// car.drive();
+// console.log(car.location);
+
+// // Ran out of gas!
+// car.fueled = false;
+// car.refuel();
+// console.log(car.location);
+// console.log(car.fueled);
+
+// // Let's go home
+// car.drive();
+// console.log(car.location);
+// car.park();
+// console.log(car.location);
+// car.stop();
+// console.log(car);
+
+// Example 2
 
 
+// let classroom = {
+//   numOfStudents: 0,
+//   schoolHours: false,
+//   playtime: false,
+//   openSchool: function() {
+//       this.schoolHours = true;
+//       this.numOfStudents = 20;
+//   },
+//   breakTime: function() {
+//       if (this.schoolHours) {
+//           this.playtime = true;
+//       }
+//   }
+// };
+
+// classroom.openSchool();
+// console.log(classroom.numOfStudents);
+// classroom.breakTime();
+// console.log(classroom.playtime);
+
+// Iterating Data Structures
+
+// Example 1
+
+// let food = ['pizza', 'steak', 'pasta', 'fruit salad', 'stir fry'];
+
+// for (let i = 0; i < food.length; i++) {
+//   console.log(food[i]);
+// }
+
+// Example 2 - same as above but using a loop
+
+// let food = ['pizza', 'steak', 'pasta', 'fruit salad', 'stir fry'];
+// for (let i of food) {
+//   console.log(i);
+// }
+
+// Example 3
+
+// let food = ['pizza', 'steak', 'pasta', 'fruit salad', 'stir fry'];
+// for (let i in food) {
+//   console.log('index', i, 'is', food[i]);
+// }
+
+// Taking this example further 
+
+// let petNames = {
+//   dog: 'Fido',
+//   cat: 'Max',
+//   fish: 'Bubbles',
+//   python: 'Mr. Slithers',
+// }
+
+// for (let i in petNames){
+//   console.log(petNames[i], 'is a', i); // Fido is a dog
+// }
+
+// Example 4 using object.entries 
+
+// let petNames = {
+//   dog: 'Fido',
+//   cat: 'Max',
+//   fish: 'Bubbles',
+//   python: 'Mr. Slithers',
+// }
+
+// let pairs = Object.entries(petNames);
+// for (let pair of pairs){
+//   console.log(pair[1], 'is a', pair[0]);
+// }
+
+// To summarize the different iteration methods:
+
+// Standard for loop: i is an array index
+// for...of loop: i is an array element/value
+// for...in on an array: i is an array index
+// for...in on an object: i is an object property
 
 
+// Example 5
 
+// let gamerScores = {
+//   john: 89,
+//   paul: 725,
+//   george: 553,
+//   robert: 9302,
+//   steve: 733,
+// };
+// // write your code here
+
+
+// for(let gamer in gamerScores) {
+//   console.log(`${gamer} scored ${gamerScores[gamer]}`); // To explain how this works - gamer is the key and gamerScores[gamer] is the value.
+// }
+
+// // Another example of this 
+
+// let ages = {
+//   alice: 25,
+//   bob: 30,
+//   charlie: 22,
+//   david: 35,
+//   emily: 28,
+// };
+
+// for (let person in ages) { // person is the key and ages[person] is the value
+//   console.log(`${person} is ${ages[person]} years old`); // alice is 25 years old
+// }
+
+// If I wanted a list of the names and ages listed in order of age, I could do this:
+
+// let ages = {
+//   alice: 25,
+//   bob: 30,
+//   charlie: 22,
+//   david: 35,
+//   emily: 28,
+// };
+
+// // Create an array of [name, age] pairs
+// let nameAgePairs = Object.entries(ages); // [['alice', 25], ['bob', 30], ['charlie', 22], ['david', 35], ['emily', 28]]
+
+// // Sort the array based on ages
+// nameAgePairs.sort((a, b) => a[1] - b[1]); // [['charlie', 22], ['alice', 25], ['emily', 28], ['bob', 30], ['david', 35]]. This works by comparing the second element of each pair (the age) and sorting them in ascending order.
+
+// // Print the sorted list of names and ages
+// for (let [name, age] of nameAgePairs) {
+//   console.log(`${name} is ${age} years old`);
+// }
   
+// Nested Data Structures
+
+// Example 1
+
+// let company = {
+//   name: 'Apple, Inc',
+//   founded: 1976,
+//   financials: {
+//     incomeStatement: {
+//       years: [2020, 2019, 2018],
+//       revenue: [125, 120, 115],
+//       costs: [100, 100, 100],
+//       profit: [25, 20, 15]
+//     },
+//     balanceSheet: {
+//       years: [2020, 2019, 2018],
+//       assets: [200, 190, 180],
+//       liabilties: [100, 95, 90],
+//       equity: [100, 95, 90]
+//     },
+//     cashFlow: {
+//       years: [2020, 2019, 2018],
+//       operating: [75, 65, 55],
+//       investing: [22, 20, 18],
+//       financing: [-94, -80, -75]    
+//     }
+//   },
+//   competitors: ['Microsoft', 'Amazon', 'Samsung']
+// }
+
+// console.log(company.name);
+// console.log(company.competitors);
+// console.log(company.competitors[0]);
+// console.log(company.financials.incomeStatement.years);
+// console.log(company.financials.incomeStatement.revenue[0]);
   
-  
-  
+
+// Example 2
+
+// javascript code
+
+// let studentData = [
+//   { 
+//       name: "John Smith",
+//       email : "john@gmail.com",
+//       subjects : ["Math", "Psychology", "Physics", "Chemistry", "Biology"],
+//   },
+//   {
+//       name: "Mary Jones",
+//       email : "mary@gmail.com",
+//       subjects : ["Fine Art", "Music", "Biology", "Geography", "Politics"]
+//   }
+// ];
+
+// console.log(studentData);
+
 

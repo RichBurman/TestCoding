@@ -1128,6 +1128,175 @@ if (ready) {
 
 // Arrays
 
+// Example 1
+
+// let cars = ['Ford', 'Honda', 'Toyota', 'Tesla']; // array literal
+
+// console.log(cars); // ['Ford', 'Honda', 'Toyota', 'Tesla'] // array literal
+
+// console.log(cars[0]); // Ford // access the first element in the array
+
+// for (let car = 0; car < 3; car++) { // loop through the array
+//   console.log(cars[car]); // Ford, Honda, Toyota
+// }
+
+// Example 2
+
+// If not sure how many items will be in the array, you can use the length property to find out:
+
+// let lotsOfElements = ['a', 'b', 'c', 'd', 'e', 'f'];
+// console.log(lotsOfElements.length);
+
+// for (let i = 0; i < lotsOfElements.length; i++) {
+//   console.log(lotsOfElements[i]);
+// }
+
+// Example 3
+
+// let clothes = ["shirt", "shoes", "socks", "hat", "vest", "shorts", "skirt", "scarf"];
+
+// let varOne = clothes[0];
+// console.log(varOne);
+
+// let varTwo = clothes[5];
+// console.log(varTwo);
+
+// let varThree = clothes[4];
+// console.log(varThree);
+
+// Array Methods 
+
+// let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
+
+// Popping and Pushing
+
+// let lastItem = fruits.pop();
+
+// console.log(lastItem);
+// console.log(fruits);
+
+// let newLength = fruits.push('mangoes');
+// console.log(newLength);
+// console.log(fruits);
+
+// Shifting and Unshifting
+
+// let firstItem = fruits.shift();
+
+// console.log(firstItem);
+// console.log(fruits);
+
+// let newLength = fruits.unshift('mangoes');
+// console.log(newLength);
+// console.log(fruits);
+
+
+// Deleting and splcing
+
+// delete fruits[2];
+// console.log(fruits);
+
+
+// fruits.splice(2, 1);  // Remove one item starting at index 2
+// console.log(fruits);
+
+// Changing the values of specific elements
+
+// Remove 'cherries', insert 'pineapples' and 'mangoes'
+// 'bananas' is shifted to the right
+// fruits.splice(2, 1, 'pineapples', 'mangoes');
+// console.log(fruits);
+
+
+
+// Insert 'pineapples' and 'mangoes' starting at index 2
+// 'cherries' is shifted to the right
+// fruits.splice(2, 0, 'pineapples', 'mangoes');
+// console.log(fruits);
+
+
+// If you simply want to change the value of an existing element, you can do it directly by replacing its index with the new value:
+
+// fruits[2] = 'pineapples';
+// console.log(fruits);
+
+// Slicing, sorting and merging
+
+
+// let subset = fruits.slice(2, 4); // Returns a new array containing the elements at index 2 and 3
+// console.log(fruits); // ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges']
+// console.log(subset); // ['cherries', 'bananas']
+
+// Sorting
+
+// fruits.sort(); // Sorts the array alphabetically
+// console.log(fruits);
+
+// Concat 
+
+// let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
+// let vegetables = ['carrots', 'peas', 'beans', 'lettuce'];
+// let healthyFoods = fruits.concat(vegetables);
+
+// console.log(fruits);
+// console.log(vegetables);
+// console.log(healthyFoods);
+
+// Testing whether an array includes an element
+
+// let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
+// let hasApples = fruits.includes('apples');  // true
+// let hasMangoes = fruits.includes('mangoes');  // false
+// console.log(hasApples);
+// console.log(hasMangoes);
+
+// Mapping, filtering and reducing
+
+// Mapping .map(): executes a given function on every single element of the array. An example might be capitalizing all the elements of an array, or multipling them all by some number.
+
+// .filter(): filters the array down to only elements that meet specific criteria. An example might be filtering a list of names down to only names that begin with a certain letter.
+
+// .reduce(): reduces all the array elements down to a single result based on a given formula. An example might be reducing an array of numbers down to their sum, by addng them all together.
+
+// Example 1
+
+// let crew = ["Jean-Luc", "Wesley", "Warf", "William", "Data", "Tasha"];
+// console.log(crew);
+
+// let lastCrewMember = crew.pop();
+// console.log(lastCrewMember);
+// console.log(crew);
+
+// crew.sort();
+// console.log(crew);
+
+// let newCrew = crew.slice(1, 4);
+// console.log(newCrew);
+
+// newCrew.push('Guinan');
+// console.log(newCrew);
+
+
+// Objects 
+
+// By wrapping a list of property:value pairs in curly braces ({}).
+
+// let person = {name: 'John', age: 30};
+
+// let car = {
+//   color: 'white',
+//   numberOfSeats: 5,
+//   price: 20000
+// }
+
+// let object = {
+//   property1: value1,
+//   property2: value2,
+//   property3: value1,
+//   ...
+//   propertyN: valueN
+// }
+
 
 
 

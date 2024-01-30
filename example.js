@@ -1298,6 +1298,83 @@ if (ready) {
 // }
 
 
+// Example 1
+
+// let spaceship = {
+//   name : "Red Dwarf",
+//   type : "Mining vessel",
+//   owner : "Jupiter Mining Corporation",
+//   captain : "Frank Hollister",
+// };
+// console.log(spaceship);
+
+// Getting and Setting Object Properties
+
+// Example 1 to get
+
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   age: 30,
+//   location: 'USA'
+// }
+
+// console.log(person['firstName']);  // 'John'
+// console.log(person.lastName);  // 'Smith'
+
+// person['bestFriend'] = 'Mike'; // add a new property to the object
+// console.log(person['bestFriend']);  // 'Mike' // access the new property
+
+// person.wife = 'Mary'; // add a new property to the object
+// console.log(person.wife);  // 'Mary' // access the new property
+
+// console.log(person); // {firstName: 'John', lastName: 'Smith', age: 30, location: 'USA', bestFriend: 'Mike', wife: 'Mary'}
+
+// Example 2 to Update
+
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   age: 30,
+//   location: 'USA'
+// };
+// person['age'] = 31;
+// console.log(person['age']);  // 31
+
+// person.location = 'Spain';
+// console.log(person.location);  // 'Spain'
+
+// Example 3 to Delete
+
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   age: 30,
+//   location: 'USA'
+// };
+// delete person['lastName'];
+// delete person.age;
+// console.log(person);
+
+// Example 4
+
+// let data = {
+//   firstName: "Arthur",
+//   lastName: "Dent",
+//   species: "Human"
+// };
+
+// let firstName = data['firstName'];
+// console.log(firstName);
+
+// let species = data.species;
+// console.log(species);
+
+// data.age = 42
+
+// console.log(data);
+
+
 
 
 

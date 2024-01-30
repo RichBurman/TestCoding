@@ -1095,21 +1095,46 @@ if (ready) {
 
 // javascript code
 
-for (let x = 0; x <= 20; x++) {
+// for (let x = 0; x <= 20; x++) {
 
-  if(x % 2 == 1){
-          continue;
-  }
+//   if(x % 2 == 1){
+//           continue;
+//   }
   
-  if(x == 10) {
-      break;
-  }
-  console.log(x);
-  }
+//   if(x == 10) {
+//       break;
+//   }
+//   console.log(x);
+//   }
   
-  // Nested Iteration
+  // Nested Iteration - A loop nested inside another loop.
 
-  
+  // Example 1
+
+  // for (let x = 0; x < 3; x++) {
+  //   for (let y = 0; y < 3; y++) {
+  //     let point = [x, y];
+  //     console.log(point);
+  //   }
+  // }
+
+  // Example 2
+
+//   for (let x = 0; x < 4; x++) {
+//     for (let y = 200; y < 204; y++){
+//         console.log('Outer loop x:',x,'Inner loop y:', y);
+//     }
+// }
+
+// Arrays
+
+
+
+
+
+
+
+
   
   
   

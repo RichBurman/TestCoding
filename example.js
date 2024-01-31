@@ -1877,4 +1877,25 @@ if (ready) {
 // console.log(month);
 // console.log(year);
 
+// Best Practice with Naming Variables
+
+// Variables must always begin with a letter
+// Variables and function names should be written in camelCase, with a lowercase first word and every subsequent word capitalized
+// Variables should be semantically named so their names represent the data they contain
+// Some developers prefer to use UPPERCASE for global variables and PascalCase for classes
+// Always use spaces around operators such as + - / * and equals signs to make sure your code is evenly spaced
+
+// Comments in JavaScript
+
+// This is a single line comment
+
+/* This is a multi-line comment
+as it continues on multiple lines */
+
+/**
+ * This is a documentation comment
+ */
+
+
+// Notes for JavaScript and the DOM 
 

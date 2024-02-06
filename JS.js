@@ -158,27 +158,38 @@
 
 // console.log('I love fruit!');
 
-let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
-let lastItem = fruits.pop();
-console.log(lastItem);
-console.log(fruits);
+// let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
+// let lastItem = fruits.pop();
+// console.log(lastItem);
+// console.log(fruits);
 
-let NewLength = fruits.push('kiwi');
-console.log(NewLength);
-console.log(fruits);
+// let NewLength = fruits.push('kiwi');
+// console.log(NewLength);
+// console.log(fruits);
 
-fruits.sort()
-console.log(fruits);
+// fruits.sort()
+// console.log(fruits);
 
-let hasApples = fruits.includes('apples');
-let hasMangoes = fruits.includes('mangoes');
-console.log(hasApples);
-console.log(hasMangoes);
+// let hasApples = fruits.includes('apples');
+// let hasMangoes = fruits.includes('mangoes');
+// console.log(hasApples);
+// console.log(hasMangoes);
 
-console.log(fruits);
+// console.log(fruits);
 
-fruits.splice(0, 0, 'mangoes');
-console.log(hasMangoes);
-console.log(fruits);
-console.log(hasMangoes);
-console.log(fruits);
+// fruits.splice(0, 0, 'mangoes');
+// console.log(hasMangoes);
+// console.log(fruits);
+// console.log(hasMangoes);
+// console.log(fruits);
+
+function buildHelloArray(num) {
+    let myArray = [];
+    for (let i = 0; i < num; i++) {
+        myArray.push("Hello");
+    }
+    return myArray;
+}
+
+let result = buildHelloArray(10);
+console.log(result);

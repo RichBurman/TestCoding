@@ -72,29 +72,29 @@
 //However, when the integer is divisible by 2, print out "Fizz"; when it's divisible by 3, 
 // print out "Buzz"; when it's divisible by both 2 and 3, print out "Fizz Buzz".
 
-function fizzBuzz(num) {
-    for (let i = 1; i <= num; i++) {
-        if (i % 2 === 0 && i % 3 === 0) 
-            console.log("Fizz Buzz");
+// function fizzBuzz(num) {
+//     for (let i = 1; i <= num; i++) {
+//         if (i % 2 === 0 && i % 3 === 0) 
+//             console.log("Fizz Buzz");
 
-        else if (i % 3 === 0) {
-            console.log("Buzz");
-        }
+//         else if (i % 3 === 0) {
+//             console.log("Buzz");
+//         }
 
-        else if (i % 2 === 0) {
-            console.log("Fizz");
-        } 
+//         else if (i % 2 === 0) {
+//             console.log("Fizz");
+//         } 
         
-        else if (i % 5 === 0)
-            console.log(i);
+//         else if (i % 5 === 0)
+//             console.log(i);
         
-        else {
-            console.log(i);
-        }
-    }
-}
+//         else {
+//             console.log(i);
+//         }
+//     }
+// }
 
-fizzBuzz(6);
+// fizzBuzz(6);
 
 // let listOfNumbers = [1,2,3,4,5];
 
@@ -118,3 +118,33 @@ fizzBuzz(6);
 
 // num --;
 // console.log(num);
+
+// let title = "this is a title of a book";
+
+// let upperTitle = title.replace(/\b\w/g, function(char) {
+//     return char.toUpperCase();
+//    });
+   
+//    console.log(upperTitle);
+//    console.log(title[0]);
+//    console.log(title.indexOf("i")); // 2
+
+
+let title = "this is a title of a book";
+let characterToCount = 'p';
+let count = 0;
+
+for (let i = 0; i < title.length; i++) {
+    if (title[i] === characterToCount) {
+        count++;
+    }
+}
+
+console.log("Number of '" + characterToCount + "' characters in title:", count);
+   
+
+
+
+// let upperTitle = title.toUpperCase();
+// console.log(upperTitle);
+

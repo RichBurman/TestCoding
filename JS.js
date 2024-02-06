@@ -130,17 +130,17 @@
 //    console.log(title.indexOf("i")); // 2
 
 
-let title = "this is a title of a book";
-let characterToCount = 'p';
-let count = 0;
+// let title = "this is a title of a book";
+// let characterToCount = 'p';
+// let count = 0;
 
-for (let i = 0; i < title.length; i++) {
-    if (title[i] === characterToCount) {
-        count++;
-    }
-}
+// for (let i = 0; i < title.length; i++) {
+//     if (title[i] === characterToCount) {
+//         count++;
+//     }
+// }
 
-console.log("Number of '" + characterToCount + "' characters in title:", count);
+// console.log("Number of '" + characterToCount + "' characters in title:", count);
    
 
 
@@ -148,3 +148,37 @@ console.log("Number of '" + characterToCount + "' characters in title:", count);
 // let upperTitle = title.toUpperCase();
 // console.log(upperTitle);
 
+// let fruits = ['apples', 'oranges', 'bananas', 'cherries'];
+// let numberOfFruits = fruits.length;	
+// let i = 0;
+// while (i < numberOfFruits) {
+//     console.log(fruits[i] + ' are delicious!');
+//     i++;
+// }
+
+// console.log('I love fruit!');
+
+let fruits = ['apples', 'pears', 'cherries', 'bananas', 'peaches', 'oranges'];
+let lastItem = fruits.pop();
+console.log(lastItem);
+console.log(fruits);
+
+let NewLength = fruits.push('kiwi');
+console.log(NewLength);
+console.log(fruits);
+
+fruits.sort()
+console.log(fruits);
+
+let hasApples = fruits.includes('apples');
+let hasMangoes = fruits.includes('mangoes');
+console.log(hasApples);
+console.log(hasMangoes);
+
+console.log(fruits);
+
+fruits.splice(0, 0, 'mangoes');
+console.log(hasMangoes);
+console.log(fruits);
+console.log(hasMangoes);
+console.log(fruits);
